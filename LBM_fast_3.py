@@ -187,15 +187,6 @@ void gauss_blur(const float* __restrict__ src, float* __restrict__ dst,
 }
 """
 
-# ================================================================== #
-#  colourise kernel: curl -> RGB uint8, entirely on the GPU.
-#  This is the whole point of the pygame rewrite. matplotlib was
-#  re-normalising, colour-mapping and resampling a float array on the CPU
-#  every frame, which cost far more than the simulation itself. Here the
-#  colour lookup happens on the GPU and only a small uint8 buffer is
-#  transferred. Output is written transposed (x-major) because pygame's
-#  surfarray expects (width, height, 3).
-# ================================================================== #
 colour_src = r"""
 __constant__ unsigned char LUT[256][3] = {
 LUT_ROWS
