@@ -91,11 +91,13 @@ The cylinder is placed 2 cells above the channel centreline. This small asymmetr
 
 ## Performance
 
-| GPU         | Steps/s | MLUPS | FPS (smooth mode) |
-|-------------|---------|-------|-------------------|
-| _your GPU_  |         |       |                   |
+| GPU | Solver MLUPS | End to end steps/s | FPS (120 steps/frame) |
+|-----|-------------:|-------------------:|----------------------:|
+| NVIDIA GeForce RTX 3060 Laptop GPU | ≈ 1 885 | ≈ 2 685 | ≈ 22 |
 
-MLUPS = steps/s × Nx × Ny / 10⁶. Steps/s is printed by the built in profiler.
+Measured with the built in profiler on the default 1600 × 400 case, averaged over 9 profiler intervals.
+Solver MLUPS = steps/s ÷ sim fraction × Nx·Ny / 10⁶. The solver takes about 91% of each frame;
+curl, blur, colour mapping, host copy and drawing take the remaining 9%.
 
 ---
 
