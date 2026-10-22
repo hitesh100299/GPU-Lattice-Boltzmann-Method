@@ -12,6 +12,7 @@ import json
 import math
 import os
 import re
+import sys
 
 import numpy as np
 import matplotlib
@@ -20,6 +21,9 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 from matplotlib.ticker import NullFormatter
 from PIL import Image
+
+# the tables contain symbols such as Δ and ω; a redirected Windows console would use cp1252
+sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 RES = os.path.join(ROOT, "cuda", "results")
