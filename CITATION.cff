@@ -1,0 +1,78 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "GPU Lattice Boltzmann Method: a CUDA solver validated against the Schäfer and Turek cylinder benchmark"
+type: software
+authors:
+  - given-names: "Hitesh Kumar"
+    family-names: "Mahanta"
+    alias: hitesh100299
+version: 1.0.0
+date-released: 2026-10-22
+license: MIT
+repository-code: "https://github.com/hitesh100299/GPU-Lattice-Boltzmann-Method"
+abstract: >-
+  A two-dimensional D2Q9 lattice Boltzmann solver in CUDA, with a real-time OpenGL
+  demo that runs the same kernels. It's validated against the DFG benchmark "flow
+  around a cylinder" (Schäfer and Turek 1996), cases 2D-1 (Re 20) and 2D-2 (Re 100),
+  with a grid study, a plane Poiseuille verification and a comparison of single and
+  double precision. Every reported number comes from a logged run in cuda/results.
+keywords:
+  - CUDA
+  - GPU
+  - lattice Boltzmann method
+  - computational fluid dynamics
+  - benchmark validation
+  - vortex shedding
+references:
+  - type: conference-paper
+    title: "Benchmark computations of laminar flow around a cylinder"
+    authors:
+      - family-names: "Schäfer"
+        given-names: "M."
+      - family-names: "Turek"
+        given-names: "S."
+    collection-title: "Flow Simulation with High-Performance Computers II, Notes on Numerical Fluid Mechanics 48"
+    doi: "10.1007/978-3-322-89849-4_39"
+    publisher:
+      name: "Vieweg"
+    year: 1996
+    start: 547
+    end: 566
+  - type: book
+    title: "The Lattice Boltzmann Method: Principles and Practice"
+    authors:
+      - family-names: "Krüger"
+        given-names: "T."
+      - family-names: "Kusumaatmaja"
+        given-names: "H."
+      - family-names: "Kuzmin"
+        given-names: "A."
+      - family-names: "Shardt"
+        given-names: "O."
+      - family-names: "Silva"
+        given-names: "G."
+      - family-names: "Viggen"
+        given-names: "E. M."
+    publisher:
+      name: "Springer"
+    year: 2017
+  - type: article
+    title: "On pressure and velocity boundary conditions for the lattice Boltzmann BGK model"
+    authors:
+      - family-names: "Zou"
+        given-names: "Q."
+      - family-names: "He"
+        given-names: "X."
+    journal: "Physics of Fluids"
+    volume: 9
+    start: 1591
+    year: 1997
+  - type: article
+    title: "Initial and boundary conditions for the lattice Boltzmann method"
+    authors:
+      - family-names: "Skordos"
+        given-names: "P. A."
+    journal: "Physical Review E"
+    volume: 48
+    start: 4823
+    year: 1993
