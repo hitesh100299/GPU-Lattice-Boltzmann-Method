@@ -1,0 +1,4 @@
+# plotting, tables and GIFs from the results (cuda/tools/report.py and the other scripts here)
+numpy
+matplotlib
+pillow
