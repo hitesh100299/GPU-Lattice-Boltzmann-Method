@@ -1,5 +1,11 @@
+# First prototype of this project (CuPy and pygame), kept for history and as the starting point.
+# It runs at Mach 0.35 with a velocity clamp, a density filter and periodic top and bottom;
+# these issues are fixed in the CUDA solver (cuda/, see the README). Packages: python/requirements.txt.
+
 import os
-os.environ["CUDA_PATH"] = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9"
+if os.name == "nt" and "CUDA_PATH" not in os.environ:
+    print("Hint: CUDA_PATH is not set. If CuPy cannot find CUDA, set it to your toolkit folder, "
+          r"for example C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9")
 
 import time
 import cupy as cp

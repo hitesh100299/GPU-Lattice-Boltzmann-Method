@@ -1,0 +1,4 @@
+# CuPy prototype (python/lbm_cupy.py)
+cupy-cuda12x
+numpy
+pygame
