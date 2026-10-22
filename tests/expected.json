@@ -1,0 +1,18 @@
+{
+  "note": "Stored values from the FP32 benchmark on an RTX 3060 Laptop GPU. The tolerance covers rounding differences between GPUs and compilers; on the same GPU and binary the results repeat exactly.",
+  "relative_tolerance": 1e-3,
+  "cases": [
+    {
+      "name": "poiseuille_H41",
+      "args": ["--case", "poiseuille", "--H", "41"],
+      "section": "poiseuille",
+      "expected": {"l2_rel_error": 0.004405239836, "umax_ratio": 1.003931463}
+    },
+    {
+      "name": "dfg_2D-2_N40",
+      "args": ["--case", "2D-2", "--nd", "40"],
+      "section": "results",
+      "expected": {"cd_max": 3.4060669, "cl_max": 1.079295717, "st": 0.3006951585, "dp_t0_half": 2.546593136}
+    }
+  ]
+}

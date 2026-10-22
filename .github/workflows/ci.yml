@@ -1,0 +1,57 @@
+# Continuous integration without a GPU (GitHub's hosted runners have none):
+#   build:   compiles every CUDA program on Linux with the same toolkit version as the
+#            development machine (CUDA 13.3), for sm_86 because there is no GPU to detect
+#   results: regenerates the result tables from the committed summary.json files and
+#            fails if they differ from the committed tables, so no number in the README can
+#            drift away from its source; also checks that the test script parses
+# The simulations themselves need a GPU and are reproduced with cuda/tools/reproduce_all.sh.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    container: nvidia/cuda:13.3.0-devel-ubuntu24.04
+    steps:
+      - uses: actions/checkout@v7
+      # A push run once hung for more than 20 minutes in this step (run 39801521671) while the
+      # identical pull request run took seconds. Each attempt is capped at 5 minutes, apt retries
+      # single downloads itself, and the whole step is tried up to 3 times; the job limit of
+      # 15 minutes is the last resort.
+      - name: Install make, GLFW and OpenGL headers
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          for attempt in 1 2 3; do
+            if timeout 300 apt-get update -o Acquire::Retries=3 &&
+               timeout 300 apt-get install -y --no-install-recommends -o Acquire::Retries=3 make libglfw3-dev libgl-dev; then
+              exit 0
+            fi
+            echo "package install attempt $attempt failed or timed out; retrying in 20 s"
+            sleep 20
+          done
+          echo "package install failed after 3 attempts"
+          exit 1
+      - name: Compile benchmark (FP32 and FP64), headless demo, window demo, bandwidth probe
+        run: make -C cuda check ARCH="-arch=sm_86"
+
+  results:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Install plotting packages
+        run: pip install -r cuda/tools/requirements.txt
+      - name: Test script parses (the tests themselves need a GPU)
+        run: python -m py_compile tests/run_tests.py cuda/tools/report.py cuda/tools/extract_reference.py
+      - name: Regenerate tables and figures from the committed results
+        run: python cuda/tools/report.py
+      - name: Committed tables must match the regenerated ones
+        run: git diff --exit-code -- cuda/results/tables.md cuda/results/history.csv
