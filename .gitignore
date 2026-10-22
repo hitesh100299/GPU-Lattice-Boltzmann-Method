@@ -1,0 +1,38 @@
+# build outputs
+*.exe
+*.exp
+*.lib
+*.obj
+*.o
+*.pdb
+*.dll
+cuda/build/
+
+# GLFW binaries (downloaded by run.bat)
+glfw*/
+glfw-*.zip
+glfw3.dll
+
+# raw dumps and frames
+*.ppm
+*.bin
+*.npz
+frame_*.ppm
+cuda/results/**/frames/
+
+# python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# release packages (built by cuda/run.bat release, uploaded to GitHub Releases, not committed)
+dist/
+
+# FeatFlow 2D-2 reference results: cuda/tools/extract_reference.py downloads and unpacks them
+cuda/reference/*.zip
+cuda/reference/20141124_dfg_bench2_official/
+
+# field and frame headers belong to the raw dumps above and are only useful next to them
+cuda/results/**/fields.json
+cuda/results/**/frames.json

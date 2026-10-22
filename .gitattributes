@@ -1,0 +1,5 @@
+# keep line endings correct on every platform (CI runs on Linux)
+*.bat   text eol=crlf
+*.sh    text eol=lf
+*.yml   text eol=lf
+*.cff   text eol=lf
