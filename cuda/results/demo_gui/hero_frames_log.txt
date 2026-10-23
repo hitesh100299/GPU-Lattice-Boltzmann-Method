@@ -4,7 +4,7 @@ command: cuda/build/lbm_cuda_headless.exe --nd 80 --steps 192000 --ppm-every 2 -
          python cuda/tools/hero_gif.py <temporary folder> 42 <temporary folder>/hero.gif
 [  630]   256 steps/frame | sim 93.9%  post  0.5%  draw  5.6%  |      6242 steps/s   24.4 FPS     3966 MLUPS (kernel) | t 59.0 D/U cD 3.2291 cL -0.2520
 Not yet periodic by the benchmark's rule after 60.0 D/U (12 consistent periods, 12 needed): no result printed, run longer (about 75 D/U at the default grid).
-C:/Users/hites/AppData/Local/Temp/tmp.hLPOm3F35R/hero.gif: 42 frames from frame_000558.ppm to frame_000640.ppm, size (1100, 206), 4.4 MB
+<temporary folder>/hero.gif: 42 frames from frame_000558.ppm to frame_000640.ppm, size (1100, 206), 4.4 MB
 regenerated GIF sha256: 0d7ebcefd05055a4dae572ecc2fdd6675f198c0148530cb13fb563b4546bb508
 committed GIF sha256:   0d7ebcefd05055a4dae572ecc2fdd6675f198c0148530cb13fb563b4546bb508
 hero GIF reproduced: identical
