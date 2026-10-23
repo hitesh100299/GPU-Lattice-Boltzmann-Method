@@ -26,11 +26,11 @@
 
 ### 2D-1: Richardson extrapolation and grid convergence index (grids 20, 40, 80, r = 2, safety factor 1.25)
 
-| quantity | finest grid | Richardson value | its error vs reference | observed order | GCI fine | convergence |
-|---|---|---|---|---|---|---|
-| cD | 5.6143 | 5.6007 | +0.38 % | 2.17 | 0.30 % | monotonic |
-| cL | 0.010934 | 0.011333 | +6.73 % | 0.88 | 4.56 % | oscillatory |
-| Δp | 0.11659 | 0.11661 | -0.77 % | 3.22 | 0.03 % | oscillatory |
+| quantity | finest grid | Richardson value | its error vs reference | observed order | GCI fine | convergence | reference inside GCI band |
+|---|---|---|---|---|---|---|---|
+| cD | 5.6143 | 5.6007 | +0.38 % | 2.17 | 0.30 % | monotonic | no |
+| cL | 0.010934 | 0.011333 | +6.73 % | 0.88 | 4.56 % | oscillatory | yes |
+| Δp | 0.11659 | 0.11661 | -0.77 % | 3.22 | 0.03 % | oscillatory | no |
 
 ## 2D-2 grid study (FP32)
 
@@ -45,12 +45,12 @@
 
 ### 2D-2: Richardson extrapolation and grid convergence index (grids 40, 80, 160, r = 2, safety factor 1.25)
 
-| quantity | finest grid | Richardson value | its error vs reference | observed order | GCI fine | convergence |
-|---|---|---|---|---|---|---|
-| cD max | 3.2476 | 3.1943 | -1.02 % | 1.00 | 2.05 % | monotonic |
-| cL max | 1.0015 | 0.99737 | +1.09 % | 2.16 | 0.51 % | monotonic |
-| St | 0.3017 | 0.30555 | +1.23 % | 0.17 | 1.60 % | monotonic |
-| Δp(t0 + T/2) | 2.4841 | 2.4863 | +0.05 % | 2.65 | 0.11 % | oscillatory |
+| quantity | finest grid | Richardson value | its error vs reference | observed order | GCI fine | convergence | reference inside GCI band |
+|---|---|---|---|---|---|---|---|
+| cD max | 3.2476 | 3.1943 | -1.02 % | 1.00 | 2.05 % | monotonic | yes |
+| cL max | 1.0015 | 0.99737 | +1.09 % | 2.16 | 0.51 % | monotonic | no |
+| St | 0.3017 | 0.30555 | +1.23 % | 0.17 | 1.60 % | monotonic | yes |
+| Δp(t0 + T/2) | 2.4841 | 2.4863 | +0.05 % | 2.65 | 0.11 % | oscillatory | yes |
 
 ## FP32 vs FP64
 

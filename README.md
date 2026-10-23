@@ -44,7 +44,7 @@ The drag peak sits just outside the paper's range. The cylinder is a staircase o
 
 <p align="center"><img src="cuda/results/figures/grid_study.png" width="100%" alt="Error versus cells per diameter"></p>
 
-The errors fall with refinement at observed orders of 1.3 to 1.6 for the force peaks. Richardson extrapolation of the 2D-1 drag lands within 0.4 % of the reference, with a grid convergence index of 0.3 % on the finest grid; all quantities are tabulated in [docs/VALIDATION.md](docs/VALIDATION.md).
+Fitted against the reference values, the errors fall at orders of 1.3 to 1.6 for the force peaks. Estimated from the three solutions alone, the order varies much more: 1.0 for the 2D-2 drag peak, 2.2 for the 2D-1 drag. A staircase cylinder changes its effective radius irregularly from grid to grid, so the error doesn't shrink smoothly, and Richardson extrapolation from three grids isn't reliable here. For the 2D-1 drag the extrapolated value is still 0.4 % above the reference, outside its 0.3 % grid convergence index. Details in [docs/VALIDATION.md](docs/VALIDATION.md).
 
 <p align="center"><img src="cuda/results/figures/forces.png" width="100%" alt="Drag and lift over time"></p>
 

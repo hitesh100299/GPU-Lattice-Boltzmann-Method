@@ -328,13 +328,13 @@ def tables(po, gs):
         L.append("")
         if e.get("gci"):
             L += [f"### {case}: Richardson extrapolation and grid convergence index (grids {', '.join(str(n) for n in e['Nd'][-3:])}, r = 2, safety factor 1.25)", "",
-                  "| quantity | finest grid | Richardson value | its error vs reference | observed order | GCI fine | convergence |", "|---|---|---|---|---|---|---|"]
+                  "| quantity | finest grid | Richardson value | its error vs reference | observed order | GCI fine | convergence | reference inside GCI band |", "|---|---|---|---|---|---|---|---|"]
             for k, name in keys:
                 g = e["gci"].get(k)
                 if g:
-                    L.append(f"| {name} | {e['values'][k][-1]:.5g} | {g['richardson']:.5g} | {g['richardson_error_pct']:+.2f} % | {g['order']:.2f} | {g['gci_fine_pct']:.2f} % | {g['convergence']} |")
+                    L.append(f"| {name} | {e['values'][k][-1]:.5g} | {g['richardson']:.5g} | {g['richardson_error_pct']:+.2f} % | {g['order']:.2f} | {g['gci_fine_pct']:.2f} % | {g['convergence']} | {'yes' if abs(e['err_pct'][k][-1]) <= g['gci_fine_pct'] else 'no'} |")
                 else:
-                    L.append(f"| {name} | {e['values'][k][-1]:.5g} | Unknown | | | | no change between two grids |")
+                    L.append(f"| {name} | {e['values'][k][-1]:.5g} | Unknown | | | | no change between two grids | |")
             L.append("")
     # FP32 vs FP64
     rows = []
