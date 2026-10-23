@@ -22,7 +22,7 @@ rem    KARMAN_NOPAUSE=1  do not wait for a key press on errors
 rem ==================================================================
 
 set "GLFW_VER=3.4"
-set "VERSION=1.0.0"
+set "VERSION=1.0.1"
 set "WORKDIR=%~dp0"
 cd /d "%WORKDIR%"
 if not exist build mkdir build
