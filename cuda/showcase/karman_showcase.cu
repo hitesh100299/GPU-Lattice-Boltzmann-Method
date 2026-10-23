@@ -49,11 +49,12 @@ extern "C" {
 }
 #endif
 
+// short file name instead of __FILE__, which would embed the build machine's absolute path
 #define CK(call) do {                                                        \
     cudaError_t e_ = (call);                                                 \
     if (e_ != cudaSuccess) {                                                 \
         std::fprintf(stderr, "CUDA error at %s:%d: %s\n  in %s\n",           \
-                     __FILE__, __LINE__, cudaGetErrorString(e_), #call);     \
+                     "karman_showcase.cu", __LINE__, cudaGetErrorString(e_), #call); \
         std::exit(1);                                                        \
     }                                                                        \
 } while (0)

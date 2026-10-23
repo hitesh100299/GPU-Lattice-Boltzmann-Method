@@ -43,11 +43,16 @@ typedef float real;
 #define PRECISION_NAME "fp32"
 #endif
 
+// Error messages name the source file by a short name fixed at compile time. __FILE__
+// would put the build machine's absolute path into every executable. The drivers
+// redefine LBM_SRC_FILE after including this header, so each message names the file
+// the failing call is in.
+#define LBM_SRC_FILE "lbm_core.cuh"
 #define CK(call) do {                                                        \
     cudaError_t e_ = (call);                                                 \
     if (e_ != cudaSuccess) {                                                 \
         std::fprintf(stderr, "CUDA error at %s:%d: %s\n  in %s\n",           \
-                     __FILE__, __LINE__, cudaGetErrorString(e_), #call);     \
+                     LBM_SRC_FILE, __LINE__, cudaGetErrorString(e_), #call);  \
         std::exit(1);                                                        \
     }                                                                        \
 } while (0)

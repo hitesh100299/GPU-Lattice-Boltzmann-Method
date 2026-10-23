@@ -30,6 +30,8 @@
 #endif
 
 #include "lbm_core.cuh"
+#undef LBM_SRC_FILE
+#define LBM_SRC_FILE "lbm_cuda.cu"
 #include <chrono>
 #include <filesystem>
 #include <fstream>
