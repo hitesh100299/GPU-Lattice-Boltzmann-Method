@@ -21,7 +21,7 @@ The reference values for 2D-1 are the ones on the FeatFlow 2D-1 page (Nabh 1998)
 | St | 0.3017 | 0.30184 | −0.05 % | 0.295 to 0.305 (inside) |
 | Δp(t0 + T/2) | 2.4841 | 2.4852 | −0.04 % | 2.46 to 2.50 (inside) |
 
-The last two errors are at the resolution of the measurement. St from the last 3, 4 or 5 periods varies between −0.05 % and −0.06 %, and shifting the time of the lift maximum by one force sample (0.02 D/U) moves Δp(t0 + T/2) by about 0.03 %.
+St depends slightly on the evaluation window: from the last 3, 4 or 5 periods its error is −0.05 %, −0.07 % and −0.05 %.
 
 **2D-1, Re = 20, 80 cells per diameter** ([summary.json](../cuda/results/2D-1_N80_fp32/summary.json)). The values are time means over the last 20 D/U; see the limitations below for why.
 
@@ -91,13 +91,13 @@ This check failed at first. With plain populations in single precision the fines
 
 ## Single versus double precision
 
-Double-precision builds were run for 2D-1 at 40 and 80 cells per diameter and 2D-2 at 80 cells per diameter. The largest FP32 to FP64 difference is 5.5e-4 in the 2D-2 lift peak, which is 4 % of the change between the two finest grids; every other difference is below 2 % of that change. So single-precision storage isn't a limiting error on these grids.
+Double-precision builds were run for 2D-1 at 40 and 80 cells per diameter and 2D-2 at 80 cells per diameter. The largest FP32 to FP64 difference is 5.5e-4 in the 2D-2 lift peak, which is 4 % of the change between the two finest grids; every other difference is below 3 % of that change. So single-precision storage isn't a limiting error on these grids.
 
-One effect remains. In single precision the steady 2D-1 drag keeps a small ripple of 1e-4 to 1e-3 relative, while the double-precision run at 40 cells settles below the 1e-4 band. The time means agree to 2e-5 in cD.
+One effect remains. In single precision the steady 2D-1 drag keeps a small ripple of 1e-4 to 1e-3 relative, while the double-precision runs at 40 and 80 cells settle below the 1e-4 band (at 99.5 and 84.4 D/U). The single-precision time means agree with them to 1.3e-5 and 6.1e-5 in cD.
 
 ## The demo reproduces the benchmark
 
-The demo runs the same kernels, case and sampling interval as the benchmark. Run headless for the step count of the 80-cell 2D-2 benchmark, it reproduces cD max, cL max and St to 1e-4 % ([consistency.json](../cuda/results/demo_consistency/consistency.json)). This is an equality check of two drivers over shared code: it guarantees that what the window shows is what was validated, but it can't catch a bug they share.
+The demo runs the same kernels, case and sampling interval as the benchmark. Run headless for the step count of the 80-cell 2D-2 benchmark, it reproduces cD max, cL max and St to every stored digit ([consistency.json](../cuda/results/demo_consistency/consistency.json)). This is an equality check of two drivers over shared code: it guarantees that what the window shows is what was validated, but it can't catch a bug they share.
 
 <p align="center"><img src="../cuda/results/figures/vorticity_2D-2.png" width="100%" alt="Vorticity magnitude at Re 100"></p>
 <p align="center"><img src="../cuda/results/figures/vorticity_2D-2_signed.png" width="100%" alt="Signed vorticity at Re 100"></p>
@@ -106,7 +106,7 @@ The demo runs the same kernels, case and sampling interval as the benchmark. Run
 ## Limitations
 
 - **2D-1 runs at 40 and 80 cells hit the time limit.** A small sustained ripple keeps the drag band above the 1e-4 stop criterion, so these runs end at 400 D/U. The reported values are 20 D/U time means; the last samples are stored next to them in each summary.json (`cd_last`, `cl_last`, `dp_last`).
-- **The 2D-1 lift depends on the averaging window.** cD and Δp are robust: the cD mean over any 20 D/U window from 80 to 400 D/U is within 4e-5. The lift mean at 80 cells moves by about ±0.15 % with the window, because the ripple is 31 % of the small lift value.
+- **The 2D-1 lift depends on the averaging window.** cD and Δp are robust: the cD means over consecutive 20 D/U windows from 80 to 400 D/U agree to 1e-5. The lift mean at 80 cells moves by about ±0.15 % with the window, because the ripple is 31 % of the small lift value.
 - **Double precision was run on three grids only:** 2D-1 at 40 and 80 cells and 2D-2 at 80 cells, plus the Poiseuille channels.
 - **The 2D-1 case at 160 cells per diameter wasn't run.** It would take about 1.9 hours, because the band criterion doesn't fire in single precision and the run would go to the 400 D/U limit.
 - **The outlet is a fixed-pressure condition,** not the paper's "do nothing" outflow. Pressure waves reflect between inlet and outlet and decay slowly, which is why the periodic runs need at least 12 consistent periods before evaluation.

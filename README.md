@@ -11,7 +11,7 @@ A CUDA lattice Boltzmann solver, validated against the DFG cylinder benchmark an
 
 | Validation error at the finest grid | Solver speed | Demo frame rate |
 |:---:|:---:|:---:|
-| Strouhal number and pressure difference within 0.1 % of the reference, drag peak within 0.62 %, lift peak within 1.5 % ([2D-2, 160 cells per diameter](cuda/results/2D-2_N160_fp32/summary.json)) | 3,844 million cell updates per second, 89 % of the GPU's measured memory bandwidth ([perf](cuda/results/perf/summary.json)) | 21.5 frames per second at 1761 × 330 cells, 256 time steps per frame ([demo log](cuda/results/demo_gui/summary.json)) |
+| Strouhal number and pressure difference within 0.1 % of the reference, drag peak within 0.62 %, lift peak within 1.5 % ([2D-2, 160 cells per diameter](cuda/results/2D-2_N160_fp32/summary.json)) | 3,932 million cell updates per second, 91 % of the GPU's measured memory bandwidth ([perf](cuda/results/perf/summary.json)) | 25.2 frames per second at 1761 × 330 cells, 256 time steps per frame ([demo log](cuda/results/demo_gui/summary.json)) |
 
 ## What this project demonstrates
 
@@ -31,7 +31,7 @@ The reference is the DFG benchmark "laminar flow around a cylinder" (Schäfer an
 
 <p align="center"><img src="cuda/results/figures/setup.png" width="100%" alt="Benchmark geometry"></p>
 
-2D-2 at 160 cells per diameter (3521 × 658 nodes), over the last three of 27 consistent shedding periods ([summary](cuda/results/2D-2_N160_fp32/summary.json)), against the FeatFlow 2014 reference results:
+2D-2 at 160 cells per diameter (3521 × 658 nodes), evaluated over the last three shedding periods once the stop rule was met at 27 consistent periods ([summary](cuda/results/2D-2_N160_fp32/summary.json)), against the FeatFlow 2014 reference results:
 
 | Quantity | Measured | Reference | Error | Paper range |
 |---|---:|---:|---:|---|
@@ -52,7 +52,7 @@ The errors fall with refinement at observed orders of 1.3 to 1.6 for the force p
 
 <p align="center"><img src="cuda/results/figures/poiseuille.png" width="100%" alt="Poiseuille profile and error versus resolution"></p>
 
-Double-precision builds on three grids differ from single precision by at most 4 % of the change between the two finest grids, so single-precision storage isn't a limiting error. Run headless for the same number of steps, the demo reproduces the benchmark's cD max, cL max and St to 1e-4 % ([check](cuda/results/demo_consistency/consistency.json)), so the window shows what was validated.
+Double-precision builds on three grids differ from single precision by at most 4 % of the change between the two finest grids, so single-precision storage isn't a limiting error. Run headless for the same number of steps, the demo reproduces the benchmark's cD max, cL max and St to every stored digit ([check](cuda/results/demo_consistency/consistency.json)), so the window shows what was validated.
 
 <p align="center"><img src="cuda/results/figures/vorticity.gif" width="100%" alt="Vorticity over two shedding periods at Re 100, 160 cells per diameter"></p>
 <p align="center"><img src="cuda/results/figures/vorticity_2D-2.png" width="100%" alt="Vorticity magnitude at Re 100"></p>
@@ -63,14 +63,14 @@ Double-precision builds on three grids differ from single precision by at most 4
 
 | Code | Grid | MLUPS, median |
 |---|---|---:|
-| CuPy prototype (AoS, CUDA graphs) | 1600 × 400 | 2,126 |
-| First CUDA version (SoA) | 1600 × 400 | 3,810 |
-| Validated solver, step kernel | 1761 × 330 | 3,844 |
-| Validated solver with force and pressure diagnostics | 1761 × 330 | 3,757 |
+| CuPy prototype (AoS, CUDA graphs) | 1600 × 400 | 2,140 |
+| First CUDA version (SoA) | 1600 × 400 | 3,897 |
+| Validated solver, step kernel | 1761 × 330 | 3,932 |
+| Validated solver with force and pressure diagnostics | 1761 × 330 | 3,908 |
 
 <p align="center"><img src="cuda/results/figures/performance.png" width="100%" alt="Effective memory bandwidth of each code against the measured copy peak"></p>
 
-MLUPS is million lattice cell updates per second, timed with CUDA events over five runs of 20,000 steps. At 73 bytes per cell update the solver moves 281 GB/s, 89 % of the 315 GB/s a plain copy kernel reaches on the same GPU. Method, noise and caveats are in [docs/PERFORMANCE.md](docs/PERFORMANCE.md).
+MLUPS is million lattice cell updates per second, timed with CUDA events over five runs of 20,000 steps. At 73 bytes per cell update the solver moves 287 GB/s, 91 % of the 317 GB/s a plain copy kernel reaches on the same GPU. Method, noise and caveats are in [docs/PERFORMANCE.md](docs/PERFORMANCE.md).
 
 ## Design highlights
 

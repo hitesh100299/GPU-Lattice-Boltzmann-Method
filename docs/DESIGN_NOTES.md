@@ -47,7 +47,7 @@ A channel without the cylinder, Nx = 4 H + 1, tau = 0.65 as in 2D-1, and U_mean 
 
 ## 8. 2D-1 values are 20 D/U time means
 
-At 40 and 80 cells per diameter the drag settles early, but a small oscillation never dies out in single precision, so the 1e-4 band criterion never fires and these runs end at the 400 D/U limit. The reported steady values are therefore the time means of cD, cL and Δp over the last 20 D/U, which average the oscillation out; the last sample is stored next to each mean in summary.json. cD and Δp hardly depend on the window. The lift does, by about ±0.15 % at 80 cells per diameter, because the oscillation is large compared with the small lift value. The 20-cell run meets the criterion and its mean equals its last sample to 3e-5.
+At 40 and 80 cells per diameter the drag settles early, but a small oscillation never dies out in single precision, so the 1e-4 band criterion never fires and these runs end at the 400 D/U limit. The reported steady values are therefore the time means of cD, cL and Δp over the last 20 D/U, which average the oscillation out; the last sample is stored next to each mean in summary.json. cD and Δp hardly depend on the window. The lift does, by about ±0.15 % at 80 cells per diameter, because the oscillation is large compared with the small lift value. The 20-cell run meets the criterion and its mean equals its last sample to 2e-5.
 
 The oscillation's period doesn't scale cleanly with the channel height, so the mode isn't identified. This is an inference: it's most likely an acoustic mode reflected between the velocity inlet and the pressure outlet, kept alive by single-precision round-off (note 10).
 
@@ -57,7 +57,7 @@ During start-up the lift crosses zero many times: the cylinder starts impulsivel
 
 ## 10. Single-precision ripple in 2D-1
 
-In double precision the 2D-1 run at 40 cells per diameter does meet the 1e-4 band criterion, while single precision doesn't within 400 D/U. The time means agree with the double-precision values to within 2e-5 relative in cD. I attribute the sustained ripple to single-precision round-off; it doesn't move the means.
+In double precision the 2D-1 runs at 40 and 80 cells per diameter do meet the 1e-4 band criterion (at 99.5 and 84.4 D/U), while single precision doesn't within 400 D/U. The single-precision time means agree with the double-precision values to 1.3e-5 and 6.1e-5 relative in cD. I attribute the sustained ripple to single-precision round-off; it doesn't move the means.
 
 ## 11. Demo playback
 
