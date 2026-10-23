@@ -35,12 +35,14 @@ lbm_strip_paths() {
     root=$(git rev-parse --show-toplevel)
     win=$(cygpath -w "$root" 2>/dev/null || echo "$root")
     python - "$1" "$root" "$win" <<'PY'
-import sys
+import os, sys
 path, *roots = sys.argv[1:]
 s = open(path, encoding="utf-8", errors="replace").read()
-for r in sorted(set(roots), key=len, reverse=True):
+# the repository becomes ".", the home folder "~" (tools such as CuPy print install paths)
+pairs = [(r, ".") for r in roots] + [(os.path.expanduser("~"), "~")]
+for r, rep in sorted(set(pairs), key=lambda x: len(x[0]), reverse=True):
     for form in (r, r.replace("\\", "/"), r.replace("/", "\\")):
-        s = s.replace(form, ".")
+        s = s.replace(form, rep)
 open(path, "w", encoding="utf-8").write(s)
 PY
 }
