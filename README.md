@@ -44,7 +44,7 @@ The drag peak sits just outside the paper's range. The cylinder is a staircase o
 
 <p align="center"><img src="cuda/results/figures/grid_study.png" width="100%" alt="Error versus cells per diameter"></p>
 
-The errors fall with refinement at observed orders of 1.3 to 1.6 for the force peaks. Richardson extrapolation of the 2D-1 drag lands within 0.4 % of the reference, with a grid convergence index of 0.3 % on the finest grid; all quantities are tabulated in [docs/VALIDATION.md](docs/VALIDATION.md).
+Fitted against the reference values, the errors fall at orders of 1.3 to 1.6 for the force peaks. Estimated from the three solutions alone, the order varies much more: 1.0 for the 2D-2 drag peak, 2.2 for the 2D-1 drag. A staircase cylinder changes its effective radius irregularly from grid to grid, so the error doesn't shrink smoothly, and Richardson extrapolation from three grids isn't reliable here. For the 2D-1 drag the extrapolated value is still 0.4 % above the reference, outside its 0.3 % grid convergence index. Details in [docs/VALIDATION.md](docs/VALIDATION.md).
 
 <p align="center"><img src="cuda/results/figures/forces.png" width="100%" alt="Drag and lift over time"></p>
 
@@ -54,7 +54,6 @@ The errors fall with refinement at observed orders of 1.3 to 1.6 for the force p
 
 Double-precision builds on three grids differ from single precision by at most 4 % of the change between the two finest grids, so single-precision storage isn't a limiting error. Run headless for the same number of steps, the demo reproduces the benchmark's cD max, cL max and St to every stored digit ([check](cuda/results/demo_consistency/consistency.json)), so the window shows what was validated.
 
-<p align="center"><img src="cuda/results/figures/vorticity.gif" width="100%" alt="Vorticity over two shedding periods at Re 100, 160 cells per diameter"></p>
 <p align="center"><img src="cuda/results/figures/vorticity_2D-2.png" width="100%" alt="Vorticity magnitude at Re 100"></p>
 <p align="center"><img src="cuda/results/figures/vorticity_2D-2_signed.png" width="100%" alt="Signed vorticity at Re 100"></p>
 <p align="center"><img src="cuda/results/figures/vorticity_2D-1.png" width="100%" alt="Vorticity magnitude at Re 20"></p>
@@ -97,10 +96,6 @@ The project started as a CuPy prototype ([python/lbm_cupy.py](python/lbm_cupy.py
 ## Visual showcase (not validated)
 
 <p align="center"><img src="docs/media/vortex_street.gif" width="100%" alt="Vortex street at Re about 823 from the original prototype"></p>
-
-| Start-up transient (steps 0 to 30,000) | Developed shedding |
-|:---:|:---:|
-| <img src="docs/media/startup.gif" width="100%" alt="Start-up transient of the prototype"> | <img src="docs/media/shedding.gif" width="100%" alt="Developed shedding in the prototype"> |
 
 Recorded from the CuPy prototype at Re about 823; the full 72,000-step run is in [vortex_street.mp4](docs/media/vortex_street.mp4). The first CUDA version, [cuda/showcase/karman_showcase.cu](cuda/showcase/karman_showcase.cu), ports it with the same parameters and is kept for its look. It runs at lattice Mach 0.35 with a velocity clamp and periodic top and bottom, far outside the range where the method is accurate. No published reference exists for this setup, and real cylinder wakes are three-dimensional above Re about 190. The release includes it as a separate launcher; the validated demo stays the default.
 

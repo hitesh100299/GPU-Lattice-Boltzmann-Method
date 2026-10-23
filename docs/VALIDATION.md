@@ -31,7 +31,7 @@ St depends slightly on the evaluation window: from the last 3, 4 or 5 periods it
 | cL | 0.010934 | 0.010619 | +2.97 % | 0.0104 to 0.0110 (inside) |
 | Δp | 0.11659 | 0.11752 | −0.80 % | 0.1172 to 0.1176 (outside by 0.0006) |
 
-Where the finest grid falls outside the paper range, the reason is the staircase cylinder. A staircase boundary is first-order accurate, the drag error has the same sign on every grid, and the observed orders for the drag are about 1.5. So the remaining +0.6 % at 80 and 160 cells per diameter is the expected residual of that first-order term. The 2D-1 pressure difference stops improving between 40 and 80 cells (−0.98 %, then −0.80 %). The probe points lie on the cylinder surface, where the staircase shifts by a fraction of a cell between grids, so this error is most likely set by the geometry rather than the flow.
+Where the finest grid falls outside the paper range, the main cause is the staircase cylinder. A staircase boundary limits the formal accuracy to first order, and because the effective cylinder radius changes irregularly between grids, convergence is irregular too. The drag error has the same sign on every grid and shrinks with refinement, but it doesn't follow one clean order (see the grid study below). The 2D-1 pressure difference stops improving between 40 and 80 cells (−0.98 %, then −0.80 %). The probe points lie on the cylinder surface, where the staircase shifts by a fraction of a cell between grids, so this error is most likely set by the geometry rather than the flow.
 
 ## Grid study
 
@@ -49,25 +49,25 @@ Where the finest grid falls outside the paper range, the reason is the staircase
 | 40 | 5.6623 (+1.48 %) | 0.010596 (−0.21 %) | 0.11636 (−0.98 %) |
 | 80 | 5.6143 (+0.62 %) | 0.010934 (+2.97 %) | 0.11659 (−0.80 %) |
 
-The errors fall with refinement for every 2D-2 quantity and for the 2D-1 drag. The fitted orders are 1.3 to 1.6 for the force peaks, which fits a staircase cylinder. In 2D-1 the lift and the pressure difference aren't monotone: the lift is a tiny by-product of the geometry (0.2 % of the drag), and both errors are already at the level the staircase position sets.
+The errors fall with refinement for every 2D-2 quantity and for the 2D-1 drag. Fitted against the reference (the slope of log error over log grid spacing), the orders are 1.3 to 1.6 for the force peaks. In 2D-1 the lift and the pressure difference aren't monotone: the lift is a tiny by-product of the geometry (0.2 % of the drag), and both errors are already at the level the staircase position sets.
 
 The 2D-2 stop rule (at least 12 consistent periods, last three within 0.2 %) was met on all three grids, after 13, 17 and 27 periods. Over the last 12 periods the spread is larger: 1.4 %, 0.7 % and 0.3 %.
 
 ### Richardson extrapolation and grid convergence index
 
-From the three finest grids of each case, with refinement ratio r = 2 and safety factor 1.25 (Roache 1994; procedure as in Celik et al. 2008). The observed order p comes from the three values; "oscillatory" means the differences between grids change sign, in which case the GCI isn't a reliable bound.
+From the three finest grids of each case, with refinement ratio r = 2 and safety factor 1.25 (Roache 1994; procedure as in Celik et al. 2008). The observed order p comes from the three values; "oscillatory" means the differences between grids change sign, in which case the GCI isn't a reliable bound. Unlike the fitted orders above, p here comes from the three solutions only, without the reference.
 
-| Case | Quantity | Finest grid | Richardson value | Its error vs reference | p | GCI fine | Convergence |
-|---|---|---:|---:|---:|---:|---:|---|
-| 2D-2 | cD max | 3.24755 | 3.19433 | −1.02 % | 1.00 | 2.05 % | monotonic |
-| 2D-2 | cL max | 1.00147 | 0.997368 | +1.09 % | 2.16 | 0.51 % | monotonic |
-| 2D-2 | St | 0.301696 | 0.30555 | +1.23 % | 0.17 | 1.60 % | monotonic |
-| 2D-2 | Δp(t0 + T/2) | 2.48409 | 2.48633 | +0.05 % | 2.65 | 0.11 % | oscillatory |
-| 2D-1 | cD | 5.61432 | 5.60066 | +0.38 % | 2.17 | 0.30 % | monotonic |
-| 2D-1 | cL | 0.0109341 | 0.0113333 | +6.73 % | 0.88 | 4.56 % | oscillatory |
-| 2D-1 | Δp | 0.116585 | 0.116612 | −0.77 % | 3.22 | 0.03 % | oscillatory |
+| Case | Quantity | Finest grid | Richardson value | Its error vs reference | p | GCI fine | Convergence | Reference inside GCI band |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| 2D-2 | cD max | 3.24755 | 3.19433 | −1.02 % | 1.00 | 2.05 % | monotonic | yes |
+| 2D-2 | cL max | 1.00147 | 0.997368 | +1.09 % | 2.16 | 0.51 % | monotonic | no |
+| 2D-2 | St | 0.301696 | 0.30555 | +1.23 % | 0.17 | 1.60 % | monotonic | yes |
+| 2D-2 | Δp(t0 + T/2) | 2.48409 | 2.48633 | +0.05 % | 2.65 | 0.11 % | oscillatory | yes |
+| 2D-1 | cD | 5.61432 | 5.60066 | +0.38 % | 2.17 | 0.30 % | monotonic | no |
+| 2D-1 | cL | 0.0109341 | 0.0113333 | +6.73 % | 0.88 | 4.56 % | oscillatory | yes |
+| 2D-1 | Δp | 0.116585 | 0.116612 | −0.77 % | 3.22 | 0.03 % | oscillatory | no |
 
-The 2D-1 drag is the clean case: monotonic, p = 2.17, and the extrapolated value is within 0.4 % of the reference. For the 2D-2 drag peak the reference lies inside the GCI band of the finest grid. St converges so slowly between 80 and 160 cells (p = 0.17) that its Richardson value overshoots; its finest-grid error of −0.05 % is already at the measurement resolution, so the extrapolation adds nothing there. The oscillatory quantities show that three grids aren't enough to extrapolate them.
+The order varies a lot between quantities, and that is the main finding. For the 2D-2 drag peak p = 1.0, as expected for a staircase boundary, and the reference lies inside the GCI band. For the 2D-1 drag p = 2.2 on these three grids, yet the extrapolated value is still 0.4 % above the reference, outside the 0.3 % band. The reference also lies outside the band for the 2D-2 lift peak and the 2D-1 pressure difference. Three staircase grids aren't in the asymptotic range, so the GCI isn't a reliable bound here. Interpolated bounce-back, which places the curved wall exactly, is the planned fix. St converges so slowly between 80 and 160 cells (p = 0.17) that its Richardson value overshoots; its finest-grid error of −0.05 % is already at the measurement resolution, so the extrapolation adds nothing there. The oscillatory quantities show that three grids aren't enough to extrapolate them.
 
 <p align="center"><img src="../cuda/results/figures/forces.png" width="100%" alt="Drag and lift over time"></p>
 

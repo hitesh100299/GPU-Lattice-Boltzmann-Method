@@ -18,10 +18,6 @@ jobs:
     container: nvidia/cuda:13.3.0-devel-ubuntu24.04
     steps:
       - uses: actions/checkout@v7
-      # A push run once hung for more than 20 minutes in this step (run 39801521671) while the
-      # identical pull request run took seconds. Each attempt is capped at 5 minutes, apt retries
-      # single downloads itself, and the whole step is tried up to 3 times; the job limit of
-      # 15 minutes is the last resort.
       - name: Install make, GLFW and OpenGL headers
         env:
           DEBIAN_FRONTEND: noninteractive

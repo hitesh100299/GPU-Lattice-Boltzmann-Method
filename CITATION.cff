@@ -7,7 +7,7 @@ authors:
     family-names: "Mahanta"
     alias: hitesh100299
 version: 1.0.0
-date-released: 2026-10-22
+date-released: 2026-10-23
 license: MIT
 repository-code: "https://github.com/hitesh100299/GPU-Lattice-Boltzmann-Method"
 abstract: >-
