@@ -1,0 +1,40 @@
+date: 2026-10-22T22:15:20+02:00
+git: 4ad1c2f
+command: cuda/build/lbm_cuda_headless.exe --nd 80 --steps 257664 --out cuda/results/demo_consistency
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 2062 MHz, 6001 MHz, 61, 41.33 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs)
+DFG benchmark 2D-2 (validated setup): Re = 100, 80 cells per diameter, grid 1761 x 330, tau 0.5600, U_mean,lat 0.0250, Mach 0.065
+Headless: 257664 steps.
+Shedding detected at step 30720 (9.6 D/U); switching to smooth playback.
+[   30]   256 steps/frame | sim 99.9%  post  0.1%  draw  0.0%  |      4514 steps/s    3.8 FPS     2671 MLUPS (kernel) | t 11.0 D/U cD 2.5751 cL +0.1886
+[   60]   256 steps/frame | sim 99.5%  post  0.5%  draw  0.0%  |      4463 steps/s   17.4 FPS     2649 MLUPS (kernel) | t 13.4 D/U cD 4.7377 cL -0.6739
+[   90]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4437 steps/s   17.3 FPS     2640 MLUPS (kernel) | t 15.8 D/U cD 2.3990 cL -0.0651
+[  120]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4440 steps/s   17.3 FPS     2647 MLUPS (kernel) | t 18.2 D/U cD 2.2094 cL +0.7169
+[  150]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4446 steps/s   17.4 FPS     2647 MLUPS (kernel) | t 20.6 D/U cD 4.2298 cL -0.2879
+[  180]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4430 steps/s   17.3 FPS     2632 MLUPS (kernel) | t 23.0 D/U cD 2.9899 cL -0.9386
+[  210]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4436 steps/s   17.3 FPS     2636 MLUPS (kernel) | t 25.4 D/U cD 2.1827 cL +0.4613
+[  240]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4431 steps/s   17.3 FPS     2633 MLUPS (kernel) | t 27.8 D/U cD 3.7939 cL +0.6821
+[  270]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4436 steps/s   17.3 FPS     2636 MLUPS (kernel) | t 30.2 D/U cD 3.1340 cL -0.8454
+[  300]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4440 steps/s   17.3 FPS     2639 MLUPS (kernel) | t 32.6 D/U cD 3.3554 cL -0.5070
+[  330]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4436 steps/s   17.3 FPS     2645 MLUPS (kernel) | t 35.0 D/U cD 3.3835 cL +0.8875
+[  360]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4442 steps/s   17.4 FPS     2655 MLUPS (kernel) | t 37.4 D/U cD 3.4170 cL +0.1565
+[  390]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4438 steps/s   17.3 FPS     2643 MLUPS (kernel) | t 39.8 D/U cD 3.0406 cL -1.0401
+[  420]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4437 steps/s   17.3 FPS     2639 MLUPS (kernel) | t 42.2 D/U cD 3.2286 cL +0.1260
+[  450]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4441 steps/s   17.3 FPS     2643 MLUPS (kernel) | t 44.6 D/U cD 3.2398 cL +0.9597
+[  480]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4438 steps/s   17.3 FPS     2645 MLUPS (kernel) | t 47.0 D/U cD 3.1076 cL -0.5279
+[  510]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4447 steps/s   17.4 FPS     2642 MLUPS (kernel) | t 49.4 D/U cD 3.2614 cL -0.8223
+[  540]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4454 steps/s   17.4 FPS     2664 MLUPS (kernel) | t 51.8 D/U cD 3.3248 cL +0.7361
+[  570]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4446 steps/s   17.4 FPS     2650 MLUPS (kernel) | t 54.2 D/U cD 3.2390 cL +0.5410
+[  600]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4438 steps/s   17.3 FPS     2638 MLUPS (kernel) | t 56.6 D/U cD 3.3006 cL -0.9712
+[  630]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4451 steps/s   17.4 FPS     2651 MLUPS (kernel) | t 59.0 D/U cD 3.2291 cL -0.2520
+[  660]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4454 steps/s   17.4 FPS     2663 MLUPS (kernel) | t 61.4 D/U cD 3.2105 cL +1.0078
+[  690]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4457 steps/s   17.4 FPS     2668 MLUPS (kernel) | t 63.8 D/U cD 3.1847 cL -0.1337
+[  720]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4448 steps/s   17.4 FPS     2645 MLUPS (kernel) | t 66.2 D/U cD 3.2228 cL -1.0036
+[  750]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4440 steps/s   17.3 FPS     2637 MLUPS (kernel) | t 68.6 D/U cD 3.1865 cL +0.4163
+[  780]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4446 steps/s   17.4 FPS     2651 MLUPS (kernel) | t 71.0 D/U cD 3.2375 cL +0.8318
+[  810]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4584 steps/s   17.9 FPS     2751 MLUPS (kernel) | t 73.4 D/U cD 3.2987 cL -0.7501
+[  840]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4457 steps/s   17.4 FPS     2675 MLUPS (kernel) | t 75.8 D/U cD 3.2113 cL -0.6131
+[  870]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      4441 steps/s   17.3 FPS     2661 MLUPS (kernel) | t 78.2 D/U cD 3.2830 cL +0.9058
+Result (last 3 periods): cD max 3.30049  cD min 3.16439  cL max 1.01571  cL min -1.04603  St 0.30122  dp(t0+T/2) 2.47224  period spread 1.28e-03
+exit code: 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 427 MHz, 6001 MHz, 62, 54.96 W

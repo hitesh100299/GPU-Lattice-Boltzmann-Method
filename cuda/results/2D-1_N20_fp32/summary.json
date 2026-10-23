@@ -1,0 +1,14 @@
+{
+"command": "lbm_bench.exe --out cuda/results/2D-1_N20_fp32 --tag git 4ad1c2f --case 2D-1 --nd 20",
+"tag": "git 4ad1c2f",
+"precision": "fp32",
+"gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "sms": 30, "cuda_driver_api": 13040, "cuda_runtime": 13040, "gpu_start": "NVIDIA GeForce RTX 3060 Laptop GPU, 2062 MHz, 6001 MHz, 61, 42.93 W",
+"machine": "cuda/results/MACHINE.md",
+"case": {"name": "2D-1", "Nd": 20, "Nx": 441, "Ny": 84, "H_lat": 82, "dx_m": 0.005, "Re": 20, "Umean_phys": 0.2, "umean_lat": 0.05, "umax_lat": 0.075, "nu_lat": 0.05, "tau": 0.65, "mach_peak": 0.1299038106, "cylinder": true, "xc_lat": 40, "yc_lat": 40.5, "steps_per_DU": 400, "dt_phys_s": 0.00125},
+"run": {"converged": true, "diverged": false, "t_conv_DU": 135.8, "steps_conv": 54320, "steps": 54320, "t_end_DU": 135.8, "t_end_s": 67.9, "cap_DU": 400, "sample_every_steps": 8, "from_rest": false, "wall_s": 1.1857924, "mlups_kernel_events": 5639.379687, "mlups_with_diagnostics": 1696.949719, "mass_start": 35954.81492, "mass_end": 35989.59836, "mass_drift_rel": 0.0009674207787, "nlinks": 190, "gpu_end": "NVIDIA GeForce RTX 3060 Laptop GPU, 1710 MHz, 6001 MHz, 63, 50.32 W"},
+"results": {"cd": 5.879218706, "cl": 0.01122003785, "dp": 0.118427826, "cd_band_last20DU": 9.906027052e-05, "definition": "time mean over the last 20 D/U", "cd_last": 5.879107027, "cl_last": 0.01127467623, "dp_last": 0.1184250651},
+"reference": {"cd": 5.579535234, "cl": 0.01061894815, "dp": 0.117520167, "source": "FeatFlow DFG benchmark 2D-1 page, values by Nabh 1998", "paper_range": {"cd": [5.57, 5.59], "cl": [0.0104, 0.0110], "dp": [0.1172, 0.1176]}},
+"error_pct": {"cd": 5.371118909, "cl": 5.660539025, "dp": 0.772343179},
+"exit_code": 0,
+"total_wall_s": 1.2723128
+}

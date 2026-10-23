@@ -1,0 +1,28 @@
+{
+ "steps": 257664,
+ "demo_steps": 257664,
+ "rows": [
+  {
+   "quantity": "cd_max",
+   "benchmark": 3.300489515,
+   "demo": 3.300489515,
+   "deviation_pct": 0.0
+  },
+  {
+   "quantity": "cl_max",
+   "benchmark": 1.015711123,
+   "demo": 1.015711123,
+   "deviation_pct": 0.0
+  },
+  {
+   "quantity": "st",
+   "benchmark": 0.3012242322,
+   "demo": 0.3012242322,
+   "deviation_pct": 0.0
+  }
+ ],
+ "pass_within_0p1_percent": true,
+ "benchmark": "cuda/results/2D-2_N80_fp32/summary.json",
+ "demo": "cuda/results/demo_consistency/summary.json",
+ "log": "cuda/results/demo_consistency/log.txt"
+}

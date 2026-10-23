@@ -1,0 +1,14 @@
+date: 2026-10-23T02:05:56+02:00
+git: b9d2dd6
+command: ncu --metrics dram__bytes_read.sum,dram__bytes_write.sum --kernel-name lbm_step --launch-skip 200 --launch-count 10 lbm_bench --case 2D-2 --nd 80 --perf --steps 300 --warmup 200
+==PROF== Connected to process 25544 (.\cuda\build\lbm_bench.exe)
+==ERROR== ERR_NVGPUCTRPERM - The user does not have permission to access NVIDIA GPU Performance Counters on the target device 0. For instructions on enabling permissions and to get more information see https://developer.nvidia.com/ERR_NVGPUCTRPERM
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp32
+command: lbm_bench.exe --case 2D-2 --nd 80 --perf --steps 300 --warmup 200 --out cuda/results/perf/ncu
+case 2D-2: grid 1761 x 330, tau 0.5600, U_mean,lat 0.02500, nu_lat 0.02000, Mach 0.065, steps per D/U 3200.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 502 MHz, 7001 MHz, 63, 42.26 W
+links on the cylinder: 774, probe nodes: 8
+perf: 300 steps, kernel only 0.5 MLUPS (events), 0.5 MLUPS (wall), with diagnostics every 64 steps 0.5 MLUPS (wall)
+summary written to cuda/results/perf/ncu/summary.json, exit 0
+==PROF== Disconnected from process 25544
+ncu exit code: 1

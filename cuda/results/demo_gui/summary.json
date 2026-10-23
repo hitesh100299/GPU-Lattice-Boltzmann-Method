@@ -1,0 +1,17 @@
+{
+ "command": "cuda/build/lbm_cuda.exe --steps 120000",
+ "log": "cuda/results/demo_gui/log.txt",
+ "intervals": 11,
+ "steps_per_frame": 256,
+ "fps": {
+  "median": 25.2,
+  "min": 24.7,
+  "max": 25.5
+ },
+ "kernel_mlups_while_drawing": {
+  "median": 3904.0,
+  "min": 3843.0,
+  "max": 3950.0
+ },
+ "interop": true
+}

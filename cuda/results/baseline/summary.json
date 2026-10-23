@@ -1,0 +1,49 @@
+{
+ "note": "Default case of both earlier versions: 1600 x 400 cells, tau 0.57, u0 0.20, Re about 823. 60 s each; the first profiler interval is dropped.",
+ "machine": "cuda/results/MACHINE.md",
+ "cuda_first_version": {
+  "log": "cuda_first_version_60s.log",
+  "program": "cuda/showcase/karman_showcase.cu, headless build",
+  "solver_mlups": {
+   "median": 3897.0,
+   "min": 3802.0,
+   "max": 4002.0,
+   "n": 72
+  },
+  "steps_per_s": {
+   "median": 5982.0,
+   "min": 5816.0,
+   "max": 6173.0,
+   "n": 72
+  }
+ },
+ "cupy_prototype": {
+  "log": "cupy_prototype_60s.log",
+  "program": "python/lbm_cupy.py",
+  "graph_path": true,
+  "solver_mlups": {
+   "median": 2139.7,
+   "min": 2075.0,
+   "max": 2192.4,
+   "n": 47
+  },
+  "steps_per_s": {
+   "median": 3006.0,
+   "min": 2931.0,
+   "max": 3083.0,
+   "n": 47
+  },
+  "sim_fraction": {
+   "median": 0.9,
+   "min": 0.9,
+   "max": 0.9,
+   "n": 47
+  },
+  "fps_120_steps_per_frame": {
+   "median": 25.0,
+   "min": 24.4,
+   "max": 25.7,
+   "n": 47
+  }
+ }
+}

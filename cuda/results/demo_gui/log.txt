@@ -1,0 +1,24 @@
+date: 2026-10-23T02:37:40+02:00
+git: b9d2dd6
+command: cuda/build/lbm_cuda.exe --steps 120000 (window, default case, 80 cells per diameter)
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 1425 MHz, 7001 MHz, 66, 44.36 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs)
+DFG benchmark 2D-2 (validated setup): Re = 100, 80 cells per diameter, grid 1761 x 330, tau 0.5600, U_mean,lat 0.0250, Mach 0.065
+CUDA/GL interop active: frames stay on the GPU.
+ESC or close window to quit.
+Shedding detected at step 30720 (9.6 D/U); switching to smooth playback.
+[   30]   256 steps/frame | sim 99.6%  post  0.3%  draw  0.1%  |      6813 steps/s    5.8 FPS     4076 MLUPS (kernel) | t 11.0 D/U cD 2.5751 cL +0.1886
+[   60]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6421 steps/s   25.1 FPS     3898 MLUPS (kernel) | t 13.4 D/U cD 4.7377 cL -0.6739
+[   90]   256 steps/frame | sim 98.2%  post  1.7%  draw  0.2%  |      6469 steps/s   25.3 FPS     3917 MLUPS (kernel) | t 15.8 D/U cD 2.3990 cL -0.0651
+[  120]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6462 steps/s   25.2 FPS     3904 MLUPS (kernel) | t 18.2 D/U cD 2.2094 cL +0.7169
+[  150]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6470 steps/s   25.3 FPS     3909 MLUPS (kernel) | t 20.6 D/U cD 4.2298 cL -0.2879
+[  180]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6459 steps/s   25.2 FPS     3903 MLUPS (kernel) | t 23.0 D/U cD 2.9899 cL -0.9386
+[  210]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6475 steps/s   25.3 FPS     3909 MLUPS (kernel) | t 25.4 D/U cD 2.1827 cL +0.4613
+[  240]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6519 steps/s   25.5 FPS     3950 MLUPS (kernel) | t 27.8 D/U cD 3.7939 cL +0.6821
+[  270]   256 steps/frame | sim 98.4%  post  1.5%  draw  0.2%  |      6412 steps/s   25.0 FPS     3881 MLUPS (kernel) | t 30.2 D/U cD 3.1340 cL -0.8454
+[  300]   256 steps/frame | sim 98.2%  post  1.6%  draw  0.2%  |      6489 steps/s   25.3 FPS     3922 MLUPS (kernel) | t 32.6 D/U cD 3.3554 cL -0.5070
+[  330]   256 steps/frame | sim 98.2%  post  1.5%  draw  0.2%  |      6328 steps/s   24.7 FPS     3843 MLUPS (kernel) | t 35.0 D/U cD 3.3835 cL +0.8875
+[  360]   256 steps/frame | sim 98.3%  post  1.5%  draw  0.2%  |      6405 steps/s   25.0 FPS     3869 MLUPS (kernel) | t 37.4 D/U cD 3.4170 cL +0.1565
+Not yet periodic by the benchmark's rule after 37.5 D/U (6 consistent periods, 12 needed): no result printed, run longer (about 75 D/U at the default grid).
+exit code: 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1612 MHz, 7001 MHz, 75, 94.57 W

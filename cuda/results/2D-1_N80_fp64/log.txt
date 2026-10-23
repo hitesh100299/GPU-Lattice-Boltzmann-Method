@@ -1,0 +1,34 @@
+date: 2026-10-22T22:03:59+02:00
+git: 4ad1c2f
+command: cuda/build/lbm_bench_fp64.exe --out cuda/results/2D-1_N80_fp64 --case 2D-1 --nd 80
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 2070 MHz, 6001 MHz, 61, 47.15 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp64
+command: lbm_bench_fp64.exe --out cuda/results/2D-1_N80_fp64 --tag git 4ad1c2f --case 2D-1 --nd 80
+case 2D-1: grid 1761 x 330, tau 0.6500, U_mean,lat 0.01250, nu_lat 0.05000, Mach 0.032, steps per D/U 6400.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 2070 MHz, 6001 MHz, 61, 47.15 W
+links on the cylinder: 774, probe nodes: 8
+sampling every 128 steps, cap 400 D/U = 2560000 steps
+t    0.02 D/U  step        128  cD 76.328870  cL +0.120997  dp 1.534631  periods 0  band20 nan  770 MLUPS  0s
+t    5.00 D/U  step      32000  cD 4.294855  cL +0.137323  dp 0.086217  periods 9  band20 nan  684 MLUPS  27s
+t   10.00 D/U  step      64000  cD 5.266863  cL +0.015368  dp 0.109126  periods 18  band20 nan  684 MLUPS  55s
+t   15.00 D/U  step      96000  cD 5.490802  cL +0.001380  dp 0.113683  periods 3  band20 nan  685 MLUPS  82s
+t   20.00 D/U  step     128000  cD 5.582392  cL +0.010405  dp 0.115879  periods 28  band20 3.14e+00  685 MLUPS  109s
+t   25.00 D/U  step     160000  cD 5.583713  cL +0.011743  dp 0.115881  periods 28  band20 1.35e+00  685 MLUPS  136s
+t   30.00 D/U  step     192000  cD 5.606659  cL +0.012467  dp 0.116397  periods 28  band20 3.18e-01  686 MLUPS  163s
+t   35.00 D/U  step     224000  cD 5.612052  cL +0.010397  dp 0.116522  periods 28  band20 1.03e-01  686 MLUPS  190s
+t   40.00 D/U  step     256000  cD 5.616872  cL +0.010876  dp 0.116640  periods 28  band20 3.47e-02  686 MLUPS  218s
+t   45.00 D/U  step     288000  cD 5.616612  cL +0.010673  dp 0.116637  periods 28  band20 1.05e-02  686 MLUPS  245s
+t   50.00 D/U  step     320000  cD 5.614005  cL +0.010928  dp 0.116577  periods 28  band20 5.46e-03  686 MLUPS  272s
+t   55.00 D/U  step     352000  cD 5.614722  cL +0.010942  dp 0.116592  periods 28  band20 2.64e-03  686 MLUPS  299s
+t   60.00 D/U  step     384000  cD 5.614527  cL +0.010999  dp 0.116588  periods 28  band20 1.35e-03  686 MLUPS  326s
+t   65.00 D/U  step     416000  cD 5.614709  cL +0.010972  dp 0.116592  periods 28  band20 8.20e-04  687 MLUPS  353s
+t   70.00 D/U  step     448000  cD 5.614771  cL +0.010940  dp 0.116594  periods 28  band20 4.41e-04  687 MLUPS  380s
+t   75.00 D/U  step     480000  cD 5.614571  cL +0.010927  dp 0.116589  periods 28  band20 2.58e-04  687 MLUPS  408s
+t   80.00 D/U  step     512000  cD 5.614698  cL +0.010925  dp 0.116592  periods 28  band20 1.55e-04  687 MLUPS  435s
+gpu at end: NVIDIA GeForce RTX 3060 Laptop GPU, 1515 MHz, 6001 MHz, 63, 54.98 W
+wall 458.6 s, 540160 steps, kernel 687 MLUPS, incl. diagnostics 684 MLUPS, mass drift 5.054e-05
+2D-1 last sample: cD 5.614632 cL 0.010945 dp 0.116591; means over the last 20 D/U (1001 samples) follow
+2D-1 result: cD 5.614660 (ref 5.579535, err +0.630%)  cL 0.010938 (ref 0.010619, err +3.00%)  dp 0.116591 (ref 0.117520, err -0.790%)  band20 9.76e-05
+summary written to cuda/results/2D-1_N80_fp64/summary.json, exit 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1515 MHz, 6001 MHz, 63, 54.98 W
+exit code: 0

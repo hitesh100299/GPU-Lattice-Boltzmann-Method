@@ -1,0 +1,13 @@
+date: 2026-10-23T02:05:34+02:00
+git: b9d2dd6
+command: cuda/build/lbm_bench.exe --out cuda/results/perf/run3 --case 2D-2 --nd 80 --perf --steps 20000 --warmup 2000
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 2055 MHz, 7001 MHz, 64, 65.74 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp32
+command: lbm_bench.exe --out cuda/results/perf/run3 --tag git b9d2dd6 --case 2D-2 --nd 80 --perf --steps 20000 --warmup 2000
+case 2D-2: grid 1761 x 330, tau 0.5600, U_mean,lat 0.02500, nu_lat 0.02000, Mach 0.065, steps per D/U 3200.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 2055 MHz, 7001 MHz, 64, 65.74 W
+links on the cylinder: 774, probe nodes: 8
+perf: 20000 steps, kernel only 4001.6 MLUPS (events), 4001.3 MLUPS (wall), with diagnostics every 64 steps 3908.3 MLUPS (wall)
+summary written to cuda/results/perf/run3/summary.json, exit 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1530 MHz, 7001 MHz, 73, 94.67 W
+exit code: 0

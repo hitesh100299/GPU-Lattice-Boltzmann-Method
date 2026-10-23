@@ -1,0 +1,9 @@
+date: 2026-10-23T02:38:44+02:00
+git: b9d2dd6
+command: cuda/build/lbm_cuda_headless.exe --re 150 --steps 64000 --out cuda/results/showcase_check/re150
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs)
+Showcase (NOT validated): Re = 150, 80 cells per diameter, grid 1761 x 330, tau 0.5400, U_mean,lat 0.0250, Mach 0.065; numbers shown are not checked against any reference
+Headless: 64000 steps.
+Diverged (non finite force) at step 640.
+Not yet periodic by the benchmark's rule after 0.2 D/U (0 consistent periods, 12 needed): no result printed, run longer (about 75 D/U at the default grid).
+exit code: 2

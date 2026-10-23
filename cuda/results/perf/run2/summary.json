@@ -1,0 +1,11 @@
+{
+"command": "lbm_bench.exe --out cuda/results/perf/run2 --tag git b9d2dd6 --case 2D-2 --nd 80 --perf --steps 20000 --warmup 2000",
+"tag": "git b9d2dd6",
+"precision": "fp32",
+"gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "sms": 30, "cuda_driver_api": 13040, "cuda_runtime": 13040, "gpu_start": "NVIDIA GeForce RTX 3060 Laptop GPU, 2055 MHz, 7001 MHz, 60, 69.51 W",
+"machine": "cuda/results/MACHINE.md",
+"case": {"name": "2D-2", "Nd": 80, "Nx": 1761, "Ny": 330, "H_lat": 328, "dx_m": 0.00125, "Re": 100, "Umean_phys": 1, "umean_lat": 0.025, "umax_lat": 0.0375, "nu_lat": 0.02, "tau": 0.56, "mach_peak": 0.06495190528, "cylinder": true, "xc_lat": 160, "yc_lat": 160.5, "steps_per_DU": 3200, "dt_phys_s": 3.125e-05},
+"perf": {"steps": 20000, "warmup": 2000, "mlups_kernel_events": 3903.027389, "mlups_kernel_wall": 3901.200207, "mlups_with_diagnostics": 3939.461513, "sample_every_steps": 64, "bytes_per_cell_update": 73, "gpu_end": "NVIDIA GeForce RTX 3060 Laptop GPU, 1575 MHz, 7001 MHz, 70, 94.55 W"},
+"exit_code": 0,
+"total_wall_s": 6.2978413
+}

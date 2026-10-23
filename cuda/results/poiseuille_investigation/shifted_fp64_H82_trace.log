@@ -1,0 +1,26 @@
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp64
+command: cuda\build\lbm_bench_fp64.exe --case poiseuille --H 82 --out %TEMP%/lbm_dbg/h82_64
+case poiseuille: grid 329 x 84, tau 0.6500, U_mean,lat 0.02500, nu_lat 0.05000, Mach 0.065, steps per D/U 0.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 2025 MHz, 7001 MHz, 80, 52.47 W
+links on the cylinder: 0, probe nodes: 0
+  step       6723  change 1.001e+00  rho_in 1.002165 rho_mid 1.001077 rho_out 1.000007  u_mid/umax 1.0005947
+  step      13446  change 3.725e-04  rho_in 1.002183 rho_mid 1.001092 rho_out 1.000007  u_mid/umax 1.0009195
+  step      20169  change 5.239e-05  rho_in 1.002199 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0009174
+  step      26892  change 7.093e-05  rho_in 1.002203 rho_mid 1.001105 rho_out 1.000007  u_mid/umax 1.0008509
+  step      33615  change 3.686e-05  rho_in 1.002202 rho_mid 1.001105 rho_out 1.000007  u_mid/umax 1.0008177
+  step      40338  change 7.525e-06  rho_in 1.002200 rho_mid 1.001104 rho_out 1.000007  u_mid/umax 1.0008140
+  step      47061  change 5.265e-06  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008190
+  step      53784  change 3.676e-06  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008223
+  step      60507  change 9.934e-07  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008231
+  step      67230  change 3.974e-07  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008227
+  step      73953  change 3.974e-07  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+  step      80676  change 1.490e-07  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008223
+  step      87399  change 9.934e-08  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008223
+  step      94122  change 9.934e-08  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+  step     100845  change 9.934e-08  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+  step     107568  change 1.242e-08  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+  step     114291  change 4.967e-08  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+  step     121014  change 9.934e-08  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+  step     127737  change 0.000e+00  rho_in 1.002200 rho_mid 1.001103 rho_out 1.000007  u_mid/umax 1.0008224
+poiseuille H 82: steps 127737, last change 0, relative L2 error 1.08802e-03, umax sim/analytic 1.000822, max |uy| 4.49e-08, rho mid 1.001103
+summary written to %TEMP%/lbm_dbg/h82_64/summary.json, exit 0

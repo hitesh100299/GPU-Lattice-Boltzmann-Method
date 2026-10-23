@@ -1,0 +1,26 @@
+date: 2026-10-22T21:28:30+02:00
+git: 4ad1c2f
+command: cuda/build/lbm_bench_fp64.exe --out cuda/results/poiseuille_H164_fp64 --case poiseuille --H 164
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 2062 MHz, 6001 MHz, 62, 50.70 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp64
+command: lbm_bench_fp64.exe --out cuda/results/poiseuille_H164_fp64 --tag git 4ad1c2f --case poiseuille --H 164
+case poiseuille: grid 657 x 166, tau 0.6500, U_mean,lat 0.01250, nu_lat 0.05000, Mach 0.032, steps per D/U 0.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 2070 MHz, 6001 MHz, 61, 42.99 W
+links on the cylinder: 0, probe nodes: 0
+  step      26895  change 1.000e+00  rho_in 1.000545 rho_mid 1.000272 rho_out 1.000001  u_mid/umax 1.0002020
+  step      53790  change 5.253e-05  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002349
+  step      80685  change 2.995e-05  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002067
+  step     107580  change 7.227e-06  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002014
+  step     134475  change 3.229e-06  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002045
+  step     161370  change 1.043e-06  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002053
+  step     188265  change 3.974e-07  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002050
+  step     215160  change 1.987e-07  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002049
+  step     242055  change 9.934e-08  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002049
+  step     268950  change 9.934e-08  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002049
+  step     295845  change 9.934e-08  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002049
+  step     322740  change 2.484e-08  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002049
+  step     349635  change 0.000e+00  rho_in 1.000549 rho_mid 1.000275 rho_out 1.000001  u_mid/umax 1.0002049
+poiseuille H 164: steps 349635, last change 0, relative L2 error 2.71208e-04, umax sim/analytic 1.000205, max |uy| 5.5e-09, rho mid 1.000275
+summary written to cuda/results/poiseuille_H164_fp64/summary.json, exit 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1560 MHz, 6001 MHz, 63, 54.94 W
+exit code: 0

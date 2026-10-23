@@ -1,0 +1,43 @@
+date: 2026-10-22T21:20:35+02:00
+git: 4ad1c2f
+command: cuda/build/lbm_bench.exe --out cuda/results/poiseuille_H41_fp32 --case poiseuille --H 41
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 210 MHz, 405 MHz, 45, 11.77 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp32
+command: lbm_bench.exe --out cuda/results/poiseuille_H41_fp32 --tag git 4ad1c2f --case poiseuille --H 41
+case poiseuille: grid 165 x 43, tau 0.6500, U_mean,lat 0.05000, nu_lat 0.05000, Mach 0.130, steps per D/U 0.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 210 MHz, 405 MHz, 45, 11.79 W
+links on the cylinder: 0, probe nodes: 0
+  step       1680  change 1.005e+00  rho_in 1.009231 rho_mid 1.004708 rho_out 1.000058  u_mid/umax 1.0053242
+  step       3360  change 2.048e-03  rho_in 1.008700 rho_mid 1.004332 rho_out 1.000053  u_mid/umax 1.0039476
+  step       5040  change 4.784e-04  rho_in 1.009001 rho_mid 1.004548 rho_out 1.000056  u_mid/umax 1.0034824
+  step       6720  change 8.435e-04  rho_in 1.008906 rho_mid 1.004477 rho_out 1.000055  u_mid/umax 1.0042888
+  step       8400  change 5.697e-04  rho_in 1.008895 rho_mid 1.004474 rho_out 1.000054  u_mid/umax 1.0037646
+  step      10080  change 2.446e-04  rho_in 1.008931 rho_mid 1.004498 rho_out 1.000055  u_mid/umax 1.0039662
+  step      11760  change 5.297e-05  rho_in 1.008906 rho_mid 1.004479 rho_out 1.000054  u_mid/umax 1.0039543
+  step      13440  change 5.484e-05  rho_in 1.008914 rho_mid 1.004486 rho_out 1.000055  u_mid/umax 1.0039018
+  step      15120  change 3.979e-05  rho_in 1.008916 rho_mid 1.004487 rho_out 1.000055  u_mid/umax 1.0039375
+  step      16800  change 6.656e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039364
+  step      18480  change 1.128e-05  rho_in 1.008913 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039284
+  step      20160  change 1.738e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039285
+  step      21840  change 5.762e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039319
+  step      23520  change 1.887e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039316
+  step      25200  change 3.080e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039318
+  step      26880  change 2.285e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039295
+  step      28560  change 2.583e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039313
+  step      30240  change 1.589e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039301
+  step      31920  change 2.186e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039321
+  step      33600  change 2.484e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000054  u_mid/umax 1.0039311
+  step      35280  change 2.186e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039321
+  step      36960  change 2.086e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039319
+  step      38640  change 1.689e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039313
+  step      40320  change 2.881e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000054  u_mid/umax 1.0039305
+  step      42000  change 1.490e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000054  u_mid/umax 1.0039308
+  step      43680  change 1.639e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039303
+  step      45360  change 2.719e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000054  u_mid/umax 1.0039302
+  step      47040  change 2.210e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039313
+  step      48720  change 2.955e-06  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039313
+  step      50400  change 8.941e-07  rho_in 1.008914 rho_mid 1.004485 rho_out 1.000055  u_mid/umax 1.0039315
+poiseuille H 41: steps 50400, last change 8.94e-07, relative L2 error 4.40524e-03, umax sim/analytic 1.003931, max |uy| 3.89e-07, rho mid 1.004485
+summary written to cuda/results/poiseuille_H41_fp32/summary.json, exit 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1425 MHz, 6001 MHz, 45, 12.19 W
+exit code: 0

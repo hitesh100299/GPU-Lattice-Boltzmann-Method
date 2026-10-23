@@ -1,0 +1,14 @@
+{
+"command": "lbm_bench.exe --out cuda/results/2D-2_N80_fp32 --tag git 4ad1c2f --case 2D-2 --nd 80 --frames",
+"tag": "git 4ad1c2f",
+"precision": "fp32",
+"gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "sms": 30, "cuda_driver_api": 13040, "cuda_runtime": 13040, "gpu_start": "NVIDIA GeForce RTX 3060 Laptop GPU, 2070 MHz, 6001 MHz, 61, 43.51 W",
+"machine": "cuda/results/MACHINE.md",
+"case": {"name": "2D-2", "Nd": 80, "Nx": 1761, "Ny": 330, "H_lat": 328, "dx_m": 0.00125, "Re": 100, "Umean_phys": 1, "umean_lat": 0.025, "umax_lat": 0.0375, "nu_lat": 0.02, "tau": 0.56, "mach_peak": 0.06495190528, "cylinder": true, "xc_lat": 160, "yc_lat": 160.5, "steps_per_DU": 3200, "dt_phys_s": 3.125e-05},
+"run": {"converged": true, "diverged": false, "t_conv_DU": 73.88, "steps_conv": 236416, "steps": 257664, "t_end_DU": 80.52, "t_end_s": 8.052, "cap_DU": 160, "sample_every_steps": 64, "from_rest": false, "wall_s": 57.6191125, "mlups_kernel_events": 2656.663303, "mlups_with_diagnostics": 2598.725906, "mass_start": 572675.7006, "mass_end": 572687.6591, "mass_drift_rel": 2.088165031e-05, "nlinks": 774, "gpu_end": "NVIDIA GeForce RTX 3060 Laptop GPU, 1402 MHz, 6001 MHz, 61, 54.82 W"},
+"results": {"valid": true, "cd_max": 3.300489515, "cd_min": 3.164391557, "cl_max": 1.015711123, "cl_min": -1.046028831, "st": 0.3012242322, "period_DU": 3.319786037, "period_spread_rel": 0.001280236049, "dp_t0_half": 2.472240255, "n_periods": 19, "window_DU": [70.54388145, 80.50323956]},
+"reference": {"cd_max": 3.22739, "cd_min": 3.16426, "cl_max": 0.98658, "cl_min": -1.02129, "st": 0.30184, "dp_t0_half": 2.4852, "source": "FeatFlow 20141124_dfg_bench2_official.zip, Q2/P1disc level 6, k = 1/1600 (cuda/reference/extracted_2d2_reference.json)", "paper_range": {"cd_max": [3.22, 3.24], "cl_max": [0.99, 1.01], "st": [0.295, 0.305], "dp": [2.46, 2.50]}},
+"error_pct": {"cd_max": 2.264973075, "cl_max": 2.952738013, "st": -0.2040046967, "dp_t0_half": -0.5214769351},
+"exit_code": 0,
+"total_wall_s": 57.7293108
+}

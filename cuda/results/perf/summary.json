@@ -1,0 +1,66 @@
+{
+ "case": "2D-2 at 80 cells per diameter (demo case)",
+ "grid": "1761 x 330",
+ "cells": 581130,
+ "steps_per_run": 20000,
+ "warmup": 2000,
+ "runs": 5,
+ "kernel_mlups": {
+  "median": 3932.27985,
+  "min": 3896.152958,
+  "max": 4001.580722,
+  "values": [
+   3896.152958,
+   3903.027389,
+   4001.580722,
+   3934.288834,
+   3932.27985
+  ]
+ },
+ "kernel_mlups_wall": {
+  "median": 3931.979788,
+  "min": 3895.823247,
+  "max": 4001.284393
+ },
+ "diag_mlups": {
+  "median": 3908.315031,
+  "min": 3691.362039,
+  "max": 3939.461513,
+  "values": [
+   3936.539832,
+   3939.461513,
+   3908.315031,
+   3691.362039,
+   3907.296494
+  ]
+ },
+ "bytes_per_cell_update_model": 73,
+ "bandwidth_model_GBs": 287.05642905,
+ "measured_peak_GBs": 316.8,
+ "percent_of_measured_peak": 90.61124654356061,
+ "ncu": "not measured: GPU performance counters are restricted to administrators (ERR_NVGPUCTRPERM)",
+ "ncu_bytes_per_cell_update": null,
+ "gpu_start": [
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 2070 MHz, 7001 MHz, 52, 32.08 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 2055 MHz, 7001 MHz, 60, 69.51 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 2055 MHz, 7001 MHz, 64, 65.74 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 2047 MHz, 7001 MHz, 65, 52.62 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 2047 MHz, 7001 MHz, 66, 57.22 W"
+ ],
+ "gpu_end": [
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 1597 MHz, 7001 MHz, 67, 93.19 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 1575 MHz, 7001 MHz, 70, 94.55 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 1530 MHz, 7001 MHz, 73, 94.67 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 1545 MHz, 7001 MHz, 74, 94.70 W",
+  "NVIDIA GeForce RTX 3060 Laptop GPU, 1545 MHz, 7001 MHz, 75, 94.84 W"
+ ],
+ "sources": [
+  "cuda/results/perf/run1/summary.json",
+  "cuda/results/perf/run2/summary.json",
+  "cuda/results/perf/run3/summary.json",
+  "cuda/results/perf/run4/summary.json",
+  "cuda/results/perf/run5/summary.json",
+  "cuda/results/perf/stream_copy.log",
+  "cuda/results/perf/ncu.log"
+ ]
+}

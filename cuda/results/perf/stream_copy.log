@@ -1,0 +1,8 @@
+date: 2026-10-23T02:05:18+02:00
+git: b9d2dd6
+command: cuda/build/stream_copy.exe
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU, memory clock 7001000 kHz, bus width 192 bit, buffers 2 x 512 MiB
+copy kernel: best 3.389 ms, mean 3.450 ms, worst 3.512 ms over 20 runs
+bandwidth (read + write): best 316.8 GB/s, mean 311.3 GB/s
+cudaMemcpy D2D: 4.514 ms, 237.9 GB/s
+RESULT_GBS 316.8

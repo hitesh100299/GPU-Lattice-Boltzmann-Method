@@ -1,0 +1,11 @@
+{
+"command": "lbm_bench.exe --out cuda/results/poiseuille_H41_fp32 --tag git 4ad1c2f --case poiseuille --H 41",
+"tag": "git 4ad1c2f",
+"precision": "fp32",
+"gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "sms": 30, "cuda_driver_api": 13040, "cuda_runtime": 13040, "gpu_start": "NVIDIA GeForce RTX 3060 Laptop GPU, 210 MHz, 405 MHz, 45, 11.79 W",
+"machine": "cuda/results/MACHINE.md",
+"case": {"name": "poiseuille", "Nd": 0, "Nx": 165, "Ny": 43, "H_lat": 41, "dx_m": 0, "Re": 41, "Umean_phys": 0, "umean_lat": 0.05, "umax_lat": 0.075, "nu_lat": 0.05, "tau": 0.65, "mach_peak": 0.1299038106, "cylinder": false, "xc_lat": 0, "yc_lat": 0, "steps_per_DU": 0, "dt_phys_s": 0},
+"poiseuille": {"H": 41, "steps": 50400, "last_change_rel": 8.940696716e-07, "tol": 1e-06, "l2_rel_error": 0.004405239836, "umax_ratio": 1.003931463, "max_abs_uy": 3.889451534e-07, "column": 82},
+"exit_code": 0,
+"total_wall_s": 0.294972
+}

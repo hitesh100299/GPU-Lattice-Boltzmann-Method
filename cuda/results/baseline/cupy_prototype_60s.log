@@ -1,0 +1,65 @@
+date: 2026-10-23T02:36:38+02:00
+git: b9d2dd6
+command: timeout 60 python -u python/lbm_cupy.py
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 2047 MHz, 7001 MHz, 67, 45.02 W
+~\AppData\Local\Programs\Python\Python311\Lib\site-packages\cupy\_environment.py:284: UserWarning: CUDA path could not be detected. Set CUDA_PATH environment variable if CuPy fails to load.
+  warnings.warn(
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.4)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Compiling CUDA kernels...
+Ready.
+Re ~ 823   nu = 0.0233   grid 1600x400
+ESC or close window to quit.
+CUDA graph captured: 2000 steps per launch.
+Shedding detected at iter 2000; switching to smooth playback.
+CUDA graph captured: 120 steps per launch.
+[   30]   120 steps/frame | sim 91.9%  post  2.3%  draw  5.7%  |      1961 steps/s   16.3 FPS
+[   60]   120 steps/frame | sim 89.8%  post  3.5%  draw  6.7%  |      3041 steps/s   25.3 FPS
+[   90]   120 steps/frame | sim 87.2%  post  4.0%  draw  8.8%  |      2932 steps/s   24.4 FPS
+[  120]   120 steps/frame | sim 89.1%  post  3.4%  draw  7.5%  |      3001 steps/s   25.0 FPS
+[  150]   120 steps/frame | sim 89.9%  post  3.4%  draw  6.7%  |      3000 steps/s   25.0 FPS
+[  180]   120 steps/frame | sim 89.9%  post  3.5%  draw  6.6%  |      3039 steps/s   25.3 FPS
+[  210]   120 steps/frame | sim 90.0%  post  3.3%  draw  6.7%  |      3030 steps/s   25.3 FPS
+[  240]   120 steps/frame | sim 90.0%  post  3.4%  draw  6.6%  |      3025 steps/s   25.2 FPS
+[  270]   120 steps/frame | sim 89.7%  post  3.3%  draw  7.0%  |      3002 steps/s   25.0 FPS
+[  300]   120 steps/frame | sim 89.6%  post  3.5%  draw  6.8%  |      3003 steps/s   25.0 FPS
+[  330]   120 steps/frame | sim 90.4%  post  3.2%  draw  6.4%  |      2991 steps/s   24.9 FPS
+[  360]   120 steps/frame | sim 90.1%  post  3.3%  draw  6.5%  |      3025 steps/s   25.2 FPS
+[  390]   120 steps/frame | sim 90.2%  post  3.3%  draw  6.5%  |      3024 steps/s   25.2 FPS
+[  420]   120 steps/frame | sim 90.0%  post  3.4%  draw  6.6%  |      3028 steps/s   25.2 FPS
+[  450]   120 steps/frame | sim 90.1%  post  3.4%  draw  6.5%  |      3028 steps/s   25.2 FPS
+[  480]   120 steps/frame | sim 90.2%  post  3.3%  draw  6.6%  |      3016 steps/s   25.1 FPS
+[  510]   120 steps/frame | sim 90.3%  post  3.1%  draw  6.5%  |      3009 steps/s   25.1 FPS
+[  540]   120 steps/frame | sim 90.3%  post  3.2%  draw  6.5%  |      3016 steps/s   25.1 FPS
+[  570]   120 steps/frame | sim 90.1%  post  3.2%  draw  6.7%  |      3028 steps/s   25.2 FPS
+[  600]   120 steps/frame | sim 90.2%  post  3.3%  draw  6.5%  |      3038 steps/s   25.3 FPS
+[  630]   120 steps/frame | sim 88.1%  post  3.9%  draw  8.0%  |      2951 steps/s   24.6 FPS
+[  660]   120 steps/frame | sim 90.2%  post  3.2%  draw  6.5%  |      3010 steps/s   25.1 FPS
+[  690]   120 steps/frame | sim 90.0%  post  3.5%  draw  6.6%  |      3006 steps/s   25.0 FPS
+[  720]   120 steps/frame | sim 90.1%  post  3.4%  draw  6.5%  |      3013 steps/s   25.1 FPS
+[  750]   120 steps/frame | sim 90.3%  post  3.3%  draw  6.5%  |      3019 steps/s   25.2 FPS
+[  780]   120 steps/frame | sim 90.0%  post  3.3%  draw  6.7%  |      2957 steps/s   24.6 FPS
+[  810]   120 steps/frame | sim 90.2%  post  3.2%  draw  6.6%  |      2984 steps/s   24.9 FPS
+[  840]   120 steps/frame | sim 89.7%  post  3.4%  draw  6.9%  |      2993 steps/s   24.9 FPS
+[  870]   120 steps/frame | sim 90.2%  post  3.3%  draw  6.5%  |      3003 steps/s   25.0 FPS
+[  900]   120 steps/frame | sim 90.3%  post  3.3%  draw  6.4%  |      2992 steps/s   24.9 FPS
+[  930]   120 steps/frame | sim 90.4%  post  3.2%  draw  6.5%  |      2931 steps/s   24.4 FPS
+[  960]   120 steps/frame | sim 90.3%  post  3.2%  draw  6.5%  |      2981 steps/s   24.8 FPS
+[  990]   120 steps/frame | sim 90.0%  post  3.4%  draw  6.6%  |      2948 steps/s   24.6 FPS
+[ 1020]   120 steps/frame | sim 90.2%  post  3.3%  draw  6.6%  |      3000 steps/s   25.0 FPS
+[ 1050]   120 steps/frame | sim 90.2%  post  3.2%  draw  6.6%  |      2972 steps/s   24.8 FPS
+[ 1080]   120 steps/frame | sim 90.5%  post  3.2%  draw  6.3%  |      2979 steps/s   24.8 FPS
+[ 1110]   120 steps/frame | sim 90.3%  post  3.3%  draw  6.4%  |      2984 steps/s   24.9 FPS
+[ 1140]   120 steps/frame | sim 90.5%  post  3.2%  draw  6.3%  |      2983 steps/s   24.9 FPS
+[ 1170]   120 steps/frame | sim 90.0%  post  3.4%  draw  6.6%  |      3008 steps/s   25.1 FPS
+[ 1200]   120 steps/frame | sim 90.0%  post  3.3%  draw  6.6%  |      2992 steps/s   24.9 FPS
+[ 1230]   120 steps/frame | sim 90.3%  post  3.3%  draw  6.4%  |      2995 steps/s   25.0 FPS
+[ 1260]   120 steps/frame | sim 90.6%  post  3.1%  draw  6.3%  |      2999 steps/s   25.0 FPS
+[ 1290]   120 steps/frame | sim 89.9%  post  3.4%  draw  6.7%  |      3050 steps/s   25.4 FPS
+[ 1320]   120 steps/frame | sim 90.1%  post  3.2%  draw  6.6%  |      3060 steps/s   25.5 FPS
+[ 1350]   120 steps/frame | sim 90.0%  post  3.3%  draw  6.7%  |      3083 steps/s   25.7 FPS
+[ 1380]   120 steps/frame | sim 90.2%  post  3.3%  draw  6.6%  |      3050 steps/s   25.4 FPS
+[ 1410]   120 steps/frame | sim 90.2%  post  3.2%  draw  6.6%  |      3066 steps/s   25.6 FPS
+[ 1440]   120 steps/frame | sim 89.3%  post  3.6%  draw  7.1%  |      3020 steps/s   25.2 FPS
+exit code: 124 (124 = stopped by the 60 s timeout, as intended)
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1665 MHz, 7001 MHz, 76, 94.19 W

@@ -1,0 +1,66 @@
+{
+ "fp32": {
+  "H": [
+   41,
+   82,
+   164
+  ],
+  "err": [
+   0.004405239836,
+   0.001087670336,
+   0.0002726343573
+  ],
+  "order_pairs": [
+   2.0179792126790046,
+   1.996202067042185
+  ],
+  "order_fit": 2.007090639860595,
+  "files": [
+   "cuda/results/poiseuille_H41_fp32/summary.json",
+   "cuda/results/poiseuille_H82_fp32/summary.json",
+   "cuda/results/poiseuille_H164_fp32/summary.json"
+  ],
+  "steps": [
+   50400,
+   2695923,
+   10784895
+  ],
+  "last_change": [
+   8.940696716e-07,
+   1.961986224e-06,
+   1.072883606e-05
+  ]
+ },
+ "fp64": {
+  "H": [
+   41,
+   82,
+   164
+  ],
+  "err": [
+   0.004404199971,
+   0.001088017818,
+   0.0002712081228
+  ],
+  "order_pairs": [
+   2.017177792222908,
+   2.00422988960674
+  ],
+  "order_fit": 2.010703840914824,
+  "files": [
+   "cuda/results/poiseuille_H41_fp64/summary.json",
+   "cuda/results/poiseuille_H82_fp64/summary.json",
+   "cuda/results/poiseuille_H164_fp64/summary.json"
+  ],
+  "steps": [
+   42000,
+   127737,
+   349635
+  ],
+  "last_change": [
+   0,
+   0,
+   0
+  ]
+ }
+}

@@ -1,0 +1,58 @@
+date: 2026-10-22T22:11:39+02:00
+git: 4ad1c2f
+command: cuda/build/lbm_bench_fp64.exe --out cuda/results/2D-2_N80_fp64 --case 2D-2 --nd 80
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 2062 MHz, 6001 MHz, 61, 41.20 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs), driver API 13040, runtime 13040, precision fp64
+command: lbm_bench_fp64.exe --out cuda/results/2D-2_N80_fp64 --tag git 4ad1c2f --case 2D-2 --nd 80
+case 2D-2: grid 1761 x 330, tau 0.5600, U_mean,lat 0.02500, nu_lat 0.02000, Mach 0.065, steps per D/U 3200.0
+gpu at start: NVIDIA GeForce RTX 3060 Laptop GPU, 2062 MHz, 6001 MHz, 61, 41.20 W
+links on the cylinder: 774, probe nodes: 8
+sampling every 64 steps, cap 160 D/U = 512000 steps
+t    0.02 D/U  step         64  cD 75.632764  cL +0.034551  dp 40.662520  periods 0  band20 nan  860 MLUPS  0s
+t    2.00 D/U  step       6400  cD 0.577506  cL -0.533363  dp 0.579644  periods 3  band20 nan  689 MLUPS  5s
+t    4.00 D/U  step      12800  cD 14.602248  cL +0.155570  dp 8.902682  periods 6  band20 nan  687 MLUPS  11s
+t    6.00 D/U  step      19200  cD 2.541226  cL -0.991393  dp 1.982086  periods 10  band20 nan  687 MLUPS  16s
+t    8.00 D/U  step      25600  cD 6.474628  cL +0.183808  dp 4.440776  periods 14  band20 nan  686 MLUPS  22s
+t   10.00 D/U  step      32000  cD 4.243707  cL -0.251761  dp 3.060476  periods 16  band20 nan  686 MLUPS  27s
+t   12.00 D/U  step      38400  cD 1.038506  cL +0.460665  dp 1.151225  periods 1  band20 nan  686 MLUPS  33s
+t   14.00 D/U  step      44800  cD 3.641841  cL -0.395055  dp 2.719788  periods 1  band20 nan  686 MLUPS  38s
+t   16.00 D/U  step      51200  cD 2.323941  cL -0.120543  dp 1.937714  periods 2  band20 nan  686 MLUPS  44s
+t   18.00 D/U  step      57600  cD 3.666824  cL +0.541808  dp 2.747435  periods 3  band20 nan  686 MLUPS  49s
+t   20.00 D/U  step      64000  cD 3.544087  cL -0.772730  dp 2.664655  periods 3  band20 2.73e+00  686 MLUPS  55s
+t   22.00 D/U  step      70400  cD 3.071726  cL +0.639749  dp 2.407402  periods 1  band20 1.28e+01  686 MLUPS  60s
+t   24.00 D/U  step      76800  cD 3.900591  cL -0.200195  dp 2.851716  periods 1  band20 3.91e+00  686 MLUPS  65s
+t   26.00 D/U  step      83200  cD 2.840475  cL -0.517590  dp 2.198027  periods 2  band20 4.15e+00  686 MLUPS  71s
+t   28.00 D/U  step      89600  cD 3.065612  cL +0.902168  dp 2.348236  periods 3  band20 3.90e+00  686 MLUPS  76s
+t   30.00 D/U  step      96000  cD 3.266099  cL -0.957623  dp 2.504035  periods 3  band20 2.30e+00  685 MLUPS  82s
+t   32.00 D/U  step     102400  cD 3.035095  cL +0.602682  dp 2.375341  periods 4  band20 2.08e+00  686 MLUPS  87s
+t   34.00 D/U  step     108800  cD 3.473060  cL -0.071578  dp 2.611628  periods 4  band20 1.78e+00  686 MLUPS  93s
+t   36.00 D/U  step     115200  cD 2.997034  cL -0.564760  dp 2.303639  periods 5  band20 1.75e+00  686 MLUPS  98s
+t   38.00 D/U  step     121600  cD 3.293639  cL +0.943779  dp 2.491173  periods 6  band20 1.18e+00  686 MLUPS  104s
+t   40.00 D/U  step     128000  cD 3.291835  cL -0.996354  dp 2.520138  periods 6  band20 9.39e-01  686 MLUPS  109s
+t   42.00 D/U  step     134400  cD 3.125803  cL +0.578447  dp 2.420309  periods 7  band20 8.75e-01  686 MLUPS  115s
+t   44.00 D/U  step     140800  cD 3.358512  cL +0.010382  dp 2.533025  periods 8  band20 6.40e-01  685 MLUPS  120s
+t   46.00 D/U  step     147200  cD 3.079848  cL -0.654126  dp 2.350195  periods 8  band20 5.58e-01  685 MLUPS  126s
+t   48.00 D/U  step     153600  cD 3.308474  cL +0.987998  dp 2.507034  periods 9  band20 4.50e-01  685 MLUPS  131s
+t   50.00 D/U  step     160000  cD 3.287334  cL -0.969422  dp 2.518940  periods 9  band20 4.06e-01  685 MLUPS  136s
+t   52.00 D/U  step     166400  cD 3.167902  cL +0.490566  dp 2.440759  periods 10  band20 3.73e-01  685 MLUPS  142s
+t   54.00 D/U  step     172800  cD 3.279757  cL +0.081029  dp 2.484728  periods 11  band20 2.70e-01  685 MLUPS  147s
+t   56.00 D/U  step     179200  cD 3.172034  cL -0.717577  dp 2.407085  periods 11  band20 2.54e-01  685 MLUPS  153s
+t   58.00 D/U  step     185600  cD 3.260540  cL +0.994036  dp 2.480063  periods 12  band20 2.39e-01  685 MLUPS  158s
+t   60.00 D/U  step     192000  cD 3.259364  cL -0.931341  dp 2.504425  periods 12  band20 2.01e-01  685 MLUPS  164s
+t   62.00 D/U  step     198400  cD 3.229085  cL +0.432788  dp 2.475727  periods 13  band20 1.73e-01  685 MLUPS  169s
+t   64.00 D/U  step     204800  cD 3.211964  cL +0.175730  dp 2.437574  periods 14  band20 1.49e-01  685 MLUPS  175s
+t   66.00 D/U  step     211200  cD 3.194497  cL -0.783564  dp 2.422297  periods 14  band20 1.13e-01  685 MLUPS  180s
+t   68.00 D/U  step     217600  cD 3.292480  cL +1.006223  dp 2.505099  periods 15  band20 1.13e-01  685 MLUPS  186s
+t   70.00 D/U  step     224000  cD 3.243347  cL -0.882892  dp 2.494512  periods 15  band20 9.28e-02  685 MLUPS  191s
+t   72.00 D/U  step     230400  cD 3.227697  cL +0.349638  dp 2.472051  periods 16  band20 8.82e-02  685 MLUPS  197s
+converged at 73.88 D/U (17 periods, period 3.3182 D/U, spread 1.68e-03); 2 more periods to step 257652
+t   74.00 D/U  step     236800  cD 3.205799  cL +0.259154  dp 2.431483  periods 17  band20 8.82e-02  685 MLUPS  202s
+t   76.00 D/U  step     243200  cD 3.215060  cL -0.831735  dp 2.436397  periods 17  band20 7.36e-02  685 MLUPS  207s
+t   78.00 D/U  step     249600  cD 3.267021  cL +1.005529  dp 2.491867  periods 18  band20 6.42e-02  685 MLUPS  213s
+t   80.00 D/U  step     256000  cD 3.246188  cL -0.844494  dp 2.497348  periods 18  band20 6.38e-02  685 MLUPS  218s
+gpu at end: NVIDIA GeForce RTX 3060 Laptop GPU, 1507 MHz, 6001 MHz, 64, 54.93 W
+wall 219.8 s, 257664 steps, kernel 685 MLUPS, incl. diagnostics 681 MLUPS, mass drift 2.327e-05
+2D-2 result (last 3 periods): cD max 3.30026 (ref 3.22739, +2.258%) cD min 3.16450  cL max 1.01516 (ref 0.98658, +2.897%) cL min -1.04555  St 0.30122 (ref 0.30184, -0.205%)  dp(t0+T/2) 2.47210 (ref 2.48520, -0.527%)  period spread 1.36e-03
+summary written to cuda/results/2D-2_N80_fp64/summary.json, exit 0
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1507 MHz, 6001 MHz, 64, 54.93 W
+exit code: 0

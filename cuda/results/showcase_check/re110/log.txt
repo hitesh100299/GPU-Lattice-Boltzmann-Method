@@ -1,0 +1,13 @@
+date: 2026-10-23T02:38:34+02:00
+git: b9d2dd6
+command: cuda/build/lbm_cuda_headless.exe --re 110 --steps 64000 --out cuda/results/showcase_check/re110
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs)
+Showcase (NOT validated): Re = 110, 80 cells per diameter, grid 1761 x 330, tau 0.5545, U_mean,lat 0.0250, Mach 0.065; numbers shown are not checked against any reference
+Headless: 64000 steps.
+Shedding detected at step 30720 (9.6 D/U); switching to smooth playback.
+[   30]   256 steps/frame | sim 99.9%  post  0.1%  draw  0.0%  |      6768 steps/s    5.7 FPS     4026 MLUPS (kernel) | t 11.0 D/U cD 2.3873 cL +0.1749
+[   60]   256 steps/frame | sim 99.5%  post  0.5%  draw  0.0%  |      6715 steps/s   26.2 FPS     4013 MLUPS (kernel) | t 13.4 D/U cD 4.9532 cL -0.8197
+[   90]   256 steps/frame | sim 99.4%  post  0.6%  draw  0.0%  |      6899 steps/s   26.9 FPS     4120 MLUPS (kernel) | t 15.8 D/U cD 2.1062 cL -0.0840
+[  120]   256 steps/frame | sim 99.5%  post  0.5%  draw  0.0%  |      6591 steps/s   25.7 FPS     3948 MLUPS (kernel) | t 18.2 D/U cD 2.0786 cL +0.8196
+Not yet periodic by the benchmark's rule after 20.0 D/U (1 consistent periods, 12 needed): no result printed, run longer (about 75 D/U at the default grid).
+exit code: 0

@@ -1,0 +1,5 @@
+code,grid,mlups_median,mlups_min,mlups_max,source
+"CuPy prototype (python/lbm_cupy.py, AoS, CUDA graph path)",1600 x 400,2139.7,2075.0,2192.4,cuda/results/baseline/summary.json
+"first CUDA version (karman_showcase.cu, SoA, headless)",1600 x 400,3897.0,3802.0,4002.0,cuda/results/baseline/summary.json
+"validated CUDA (cuda/lbm_bench.cu, SoA, shifted populations, kernel only)",1761 x 330,3932.27985,3896.152958,4001.580722,cuda/results/perf/summary.json
+"validated CUDA, including force and pressure diagnostics",1761 x 330,3908.315031,3691.362039,3939.461513,cuda/results/perf/summary.json

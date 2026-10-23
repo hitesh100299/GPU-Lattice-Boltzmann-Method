@@ -1,0 +1,83 @@
+date: 2026-10-23T02:35:37+02:00
+git: b9d2dd6
+command: timeout 60 cuda/build/karman_showcase_headless.exe (run in a temporary folder, it writes PPM snapshots)
+gpu before: NVIDIA GeForce RTX 3060 Laptop GPU, 210 MHz, 405 MHz, 44, 14.82 W
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU (30 SMs)
+Headless: writing frame_XXXXX.ppm every 100 frames.
+Re ~ 823   nu = 0.0233   grid 1600x400   cylinder r = 48
+Shedding detected at iter 2000; switching to smooth playback.
+[   30]   120 steps/frame | sim 98.5%  post  0.9%  draw  0.7%  |      6035 steps/s   33.0 FPS     3921 MLUPS
+[   60]   120 steps/frame | sim 98.6%  post  1.3%  draw  0.0%  |      6055 steps/s   50.5 FPS     3928 MLUPS
+[   90]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6069 steps/s   50.6 FPS     3934 MLUPS
+[  120]   120 steps/frame | sim 97.9%  post  1.3%  draw  0.8%  |      6006 steps/s   50.1 FPS     3928 MLUPS
+[  150]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6036 steps/s   50.3 FPS     3919 MLUPS
+[  180]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6019 steps/s   50.2 FPS     3906 MLUPS
+[  210]   120 steps/frame | sim 97.3%  post  1.3%  draw  1.4%  |      5997 steps/s   50.0 FPS     3946 MLUPS
+[  240]   120 steps/frame | sim 98.5%  post  1.5%  draw  0.0%  |      6115 steps/s   51.0 FPS     3973 MLUPS
+[  270]   120 steps/frame | sim 98.6%  post  1.3%  draw  0.0%  |      6012 steps/s   50.1 FPS     3900 MLUPS
+[  300]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6024 steps/s   50.2 FPS     3907 MLUPS
+[  330]   120 steps/frame | sim 97.3%  post  1.3%  draw  1.3%  |      5982 steps/s   49.9 FPS     3935 MLUPS
+[  360]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6015 steps/s   50.1 FPS     3904 MLUPS
+[  390]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6049 steps/s   50.4 FPS     3927 MLUPS
+[  420]   120 steps/frame | sim 97.9%  post  1.3%  draw  0.8%  |      6014 steps/s   50.1 FPS     3932 MLUPS
+[  450]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6010 steps/s   50.1 FPS     3901 MLUPS
+[  480]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6173 steps/s   51.4 FPS     4002 MLUPS
+[  510]   120 steps/frame | sim 97.5%  post  1.3%  draw  1.2%  |      5963 steps/s   49.7 FPS     3914 MLUPS
+[  540]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6033 steps/s   50.3 FPS     3915 MLUPS
+[  570]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6098 steps/s   50.8 FPS     3955 MLUPS
+[  600]   120 steps/frame | sim 98.6%  post  1.3%  draw  0.0%  |      5949 steps/s   49.6 FPS     3860 MLUPS
+[  630]   120 steps/frame | sim 97.4%  post  1.4%  draw  1.2%  |      6041 steps/s   50.3 FPS     3969 MLUPS
+[  660]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5937 steps/s   49.5 FPS     3853 MLUPS
+[  690]   120 steps/frame | sim 98.5%  post  1.5%  draw  0.0%  |      5944 steps/s   49.5 FPS     3863 MLUPS
+[  720]   120 steps/frame | sim 97.5%  post  1.4%  draw  1.1%  |      5996 steps/s   50.0 FPS     3935 MLUPS
+[  750]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5913 steps/s   49.3 FPS     3838 MLUPS
+[  780]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6038 steps/s   50.3 FPS     3920 MLUPS
+[  810]   120 steps/frame | sim 97.9%  post  1.3%  draw  0.8%  |      5930 steps/s   49.4 FPS     3878 MLUPS
+[  840]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5941 steps/s   49.5 FPS     3858 MLUPS
+[  870]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6016 steps/s   50.1 FPS     3905 MLUPS
+[  900]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5880 steps/s   49.0 FPS     3816 MLUPS
+[  930]   120 steps/frame | sim 97.7%  post  1.3%  draw  0.9%  |      5980 steps/s   49.8 FPS     3916 MLUPS
+[  960]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      5891 steps/s   49.1 FPS     3821 MLUPS
+[  990]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5918 steps/s   49.3 FPS     3840 MLUPS
+[ 1020]   120 steps/frame | sim 97.8%  post  1.4%  draw  0.8%  |      5826 steps/s   48.5 FPS     3813 MLUPS
+[ 1050]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5987 steps/s   49.9 FPS     3885 MLUPS
+[ 1080]   120 steps/frame | sim 98.7%  post  1.2%  draw  0.0%  |      5936 steps/s   49.5 FPS     3847 MLUPS
+[ 1110]   120 steps/frame | sim 97.9%  post  1.3%  draw  0.8%  |      6070 steps/s   50.6 FPS     3970 MLUPS
+[ 1140]   120 steps/frame | sim 98.5%  post  1.4%  draw  0.0%  |      5963 steps/s   49.7 FPS     3873 MLUPS
+[ 1170]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6004 steps/s   50.0 FPS     3892 MLUPS
+[ 1200]   120 steps/frame | sim 98.6%  post  1.3%  draw  0.0%  |      6013 steps/s   50.1 FPS     3902 MLUPS
+[ 1230]   120 steps/frame | sim 97.9%  post  1.3%  draw  0.8%  |      5816 steps/s   48.5 FPS     3802 MLUPS
+[ 1260]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6012 steps/s   50.1 FPS     3902 MLUPS
+[ 1290]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6000 steps/s   50.0 FPS     3892 MLUPS
+[ 1320]   120 steps/frame | sim 97.9%  post  1.3%  draw  0.8%  |      5976 steps/s   49.8 FPS     3908 MLUPS
+[ 1350]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5922 steps/s   49.4 FPS     3845 MLUPS
+[ 1380]   120 steps/frame | sim 98.6%  post  1.3%  draw  0.0%  |      5991 steps/s   49.9 FPS     3888 MLUPS
+[ 1410]   120 steps/frame | sim 97.8%  post  1.4%  draw  0.8%  |      5949 steps/s   49.6 FPS     3892 MLUPS
+[ 1440]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6065 steps/s   50.5 FPS     3935 MLUPS
+[ 1470]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5939 steps/s   49.5 FPS     3855 MLUPS
+[ 1500]   120 steps/frame | sim 98.4%  post  1.5%  draw  0.0%  |      5919 steps/s   49.3 FPS     3848 MLUPS
+[ 1530]   120 steps/frame | sim 97.7%  post  1.4%  draw  0.9%  |      5954 steps/s   49.6 FPS     3899 MLUPS
+[ 1560]   120 steps/frame | sim 98.5%  post  1.5%  draw  0.0%  |      5957 steps/s   49.6 FPS     3871 MLUPS
+[ 1590]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5967 steps/s   49.7 FPS     3872 MLUPS
+[ 1620]   120 steps/frame | sim 97.8%  post  1.3%  draw  0.9%  |      6051 steps/s   50.4 FPS     3959 MLUPS
+[ 1650]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      5956 steps/s   49.6 FPS     3862 MLUPS
+[ 1680]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      5938 steps/s   49.5 FPS     3850 MLUPS
+[ 1710]   120 steps/frame | sim 97.6%  post  1.3%  draw  1.1%  |      5987 steps/s   49.9 FPS     3925 MLUPS
+[ 1740]   120 steps/frame | sim 98.5%  post  1.5%  draw  0.0%  |      5958 steps/s   49.7 FPS     3873 MLUPS
+[ 1770]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6062 steps/s   50.5 FPS     3934 MLUPS
+[ 1800]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      5950 steps/s   49.6 FPS     3859 MLUPS
+[ 1830]   120 steps/frame | sim 97.8%  post  1.3%  draw  0.9%  |      5859 steps/s   48.8 FPS     3833 MLUPS
+[ 1860]   120 steps/frame | sim 98.5%  post  1.4%  draw  0.0%  |      6074 steps/s   50.6 FPS     3945 MLUPS
+[ 1890]   120 steps/frame | sim 98.2%  post  1.7%  draw  0.0%  |      5942 steps/s   49.5 FPS     3871 MLUPS
+[ 1920]   120 steps/frame | sim 97.6%  post  1.5%  draw  0.9%  |      6008 steps/s   50.1 FPS     3938 MLUPS
+[ 1950]   120 steps/frame | sim 98.5%  post  1.5%  draw  0.0%  |      5863 steps/s   48.9 FPS     3810 MLUPS
+[ 1980]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      5937 steps/s   49.5 FPS     3851 MLUPS
+[ 2010]   120 steps/frame | sim 97.8%  post  1.4%  draw  0.8%  |      5982 steps/s   49.8 FPS     3913 MLUPS
+[ 2040]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      5918 steps/s   49.3 FPS     3837 MLUPS
+[ 2070]   120 steps/frame | sim 98.5%  post  1.5%  draw  0.0%  |      5968 steps/s   49.7 FPS     3878 MLUPS
+[ 2100]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      5893 steps/s   49.1 FPS     3826 MLUPS
+[ 2130]   120 steps/frame | sim 97.7%  post  1.5%  draw  0.8%  |      5866 steps/s   48.9 FPS     3842 MLUPS
+[ 2160]   120 steps/frame | sim 98.7%  post  1.3%  draw  0.0%  |      6003 steps/s   50.0 FPS     3895 MLUPS
+[ 2190]   120 steps/frame | sim 98.6%  post  1.4%  draw  0.0%  |      6024 steps/s   50.2 FPS     3909 MLUPS
+[ 2220]   120 sexit code: 124 (124 = stopped by the 60 s timeout, as intended)
+gpu after: NVIDIA GeForce RTX 3060 Laptop GPU, 1987 MHz, 7001 MHz, 76, 86.50 W
