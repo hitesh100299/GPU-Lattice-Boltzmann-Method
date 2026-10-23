@@ -12,6 +12,8 @@
 // Exit codes: 0 finished, 2 divergence, 3 time limit reached before convergence,
 //             4 output folder or summary.json could not be written.
 #include "lbm_core.cuh"
+#undef LBM_SRC_FILE
+#define LBM_SRC_FILE "lbm_bench.cu"
 #include <chrono>
 #include <filesystem>
 #include <fstream>
