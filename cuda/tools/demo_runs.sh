@@ -3,8 +3,9 @@
 #   1. frame rate of the window build (Windows with a display only): 120,000 steps of
 #      the default case, profiler medians in cuda/results/demo_gui/summary.json
 #   2. hero GIF check: regenerates the frames of docs/media/hero_re100_validated.gif with
-#      the headless demo into a temporary folder and compares the result with the
-#      committed GIF byte for byte (the committed GIF is never overwritten)
+#      the headless demo into a temporary folder and compares frame count and frame size
+#      with the committed GIF. Not bytes: the committed GIF is compressed with gifsicle
+#      (lossy), which a fresh run doesn't apply. The committed GIF is never overwritten.
 #   3. showcase stability: the --re mode at Re 110, 120, 150, 200 and 500 for 64,000 steps
 # Run from the repository root: bash cuda/tools/demo_runs.sh [--allow-dirty]
 set -u
@@ -51,12 +52,28 @@ TMP=$(mktemp -d)
   echo "         python cuda/tools/hero_gif.py <temporary folder> 42 <temporary folder>/hero.gif"
   cuda/build/lbm_cuda_headless$X --nd 80 --steps 192000 --ppm-every 2 --out "$TMP" | tail -2
   python cuda/tools/hero_gif.py "$TMP" 42 "$TMP/hero.gif"
-  new=$(sha256sum "$TMP/hero.gif" | cut -d' ' -f1); old=$(sha256sum docs/media/hero_re100_validated.gif | cut -d' ' -f1)
-  echo "regenerated GIF sha256: $new"
-  echo "committed GIF sha256:   $old"
-  [ "$new" = "$old" ] && echo "hero GIF reproduced: identical" || echo "hero GIF reproduced: DIFFERENT (the committed GIF is kept)"
+  python - "$TMP/hero.gif" docs/media/hero_re100_validated.gif <<'PY'
+import sys
+from PIL import Image
+def shape(p):
+    im = Image.open(p)
+    return im.n_frames, im.size
+new, old = shape(sys.argv[1]), shape(sys.argv[2])
+print(f"regenerated GIF: {new[0]} frames, {new[1][0]} x {new[1][1]}")
+print(f"committed GIF:   {old[0]} frames, {old[1][0]} x {old[1][1]}")
+print("hero GIF reproduced: same frame count and size" if new == old else
+      "hero GIF reproduced: DIFFERENT frame count or size (the committed GIF is kept)")
+PY
 } > "$D/hero_frames_log.txt" 2>&1
-sed -i "s#$TMP#<temporary folder>#g" "$D/hero_frames_log.txt"
+# the temporary folder appears in Unix form and, from Python on Windows, in Windows form
+for t in "$TMP" "$(cygpath -m "$TMP" 2>/dev/null)" "$(cygpath -w "$TMP" 2>/dev/null)"; do
+  [ -n "$t" ] && python - "$D/hero_frames_log.txt" "$t" <<'PY'
+import sys
+p, t = sys.argv[1:]
+s = open(p, encoding="utf-8", errors="replace").read()
+open(p, "w", encoding="utf-8").write(s.replace(t, "<temporary folder>"))
+PY
+done
 lbm_strip_paths "$D/hero_frames_log.txt"
 grep "hero GIF reproduced" "$D/hero_frames_log.txt"
 
